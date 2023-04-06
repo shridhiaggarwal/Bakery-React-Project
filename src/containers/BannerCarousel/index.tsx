@@ -32,7 +32,7 @@ function BannerCarousel() {
               <p>
                 We bake with love and passion to bring you the best flavors.
               </p>
-              <Button content={'our menu'} />
+              <Button>our menu</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -43,7 +43,7 @@ function BannerCarousel() {
                 We offer catering services for any kind of event! Contact us to
                 make an order
               </p>
-              <Button content={'our services'} />
+              <Button>our services</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -53,7 +53,7 @@ function BannerCarousel() {
               <p>
                 Satisfy your sweet cravings with our delectable bakery delights.
               </p>
-              <Button content={'contact us'} />
+              <Button>contact us</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -64,7 +64,7 @@ function BannerCarousel() {
                 Get a taste of heaven with our handcrafted pastries and
                 desserts.
               </p>
-              <Button content={'our menu'} />
+              <Button>our menu</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -72,7 +72,7 @@ function BannerCarousel() {
             <div className="carousel-caption">
               <h3>We love Cupcakes</h3>
               <p>Join us for a cup of coffee and a bite of heaven.</p>
-              <Button content={'contact us'} />
+              <Button>contact us</Button>
             </div>
           </div>
         </div>

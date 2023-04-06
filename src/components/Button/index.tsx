@@ -1,13 +1,13 @@
 import React from "react";
-import './button.css'
+import buttonStyles from './button.module.css'
 
 interface IButtonProps {
-  content: string;
+  children: string;
 }
 
 function Button(props: IButtonProps) {
-  const { content } = props;
-  return <button className="commonButton">{content}</button>;
+  const { children } = props;
+  return <button className={buttonStyles.commonButton}>{children}</button>;
 }
 
 export default Button;

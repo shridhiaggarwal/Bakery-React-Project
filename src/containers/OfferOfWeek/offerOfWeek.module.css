@@ -1,0 +1,50 @@
+.offerOfWeek {
+  height: 360px;
+  background-color: #fdf2d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px 80px;
+}
+
+.offerOfWeek .icecreamElement {
+  position: absolute;
+  top: 58%;
+  left: 5%;
+  height: 200px;
+  transform: rotate(-28deg);
+}
+
+.offerOfWeekText {
+  width: 600px;
+  text-align: center;
+}
+
+.offerOfWeekText h4 {
+  font-family: "Satisfy", "cursive";
+  font-size: 2.875rem;
+  font-weight: bolder;
+  color: #da5162;
+  margin-bottom: 1rem;
+}
+
+.offerOfWeekText p {
+  font-family: "Montserrat", sans-serif;
+  /* color: #da5162; */
+}
+
+.offerOfWeekImage {
+  height: 100%;
+  width: 500px;
+  background-image: url("../../images/backgrounds/background1.png");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offerOfWeekImage img {
+  width: 300px;
+}

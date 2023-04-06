@@ -1,9 +1,11 @@
 import BannerCarousel from "../../containers/BannerCarousel";
+import OfferOfWeek from "../../containers/OfferOfWeek";
 
 function HomePage() {
   return (
     <>
       <BannerCarousel />
+      <OfferOfWeek/>
     </>
   );
 }
