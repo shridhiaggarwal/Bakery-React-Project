@@ -1,0 +1,60 @@
+.navbar {
+  background-color: #da5162;
+  height: 80px;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+
+.navbar-brand img {
+  width: 80px;
+  margin-right: 4px;
+}
+
+.navbar-text {
+  font-family: "Pacifico", cursive;
+  color: white;
+  line-height: 60px;
+  padding: 10px 0px !important;
+}
+
+.navbar-nav .nav-link {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px !important;
+  font-weight: bolder;
+  font-size: 0.875rem;
+  line-height: 60px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: white;
+  color: #da5162;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: white;
+  color: #da5162;
+}
+
+.navbar-collapse {
+  background-color: #da5162;
+}
+
+.navToggleIcon {
+  color: white;
+  margin-right: 1rem;
+}
+
+.dummyNavbar{
+  height: 80px;
+}
