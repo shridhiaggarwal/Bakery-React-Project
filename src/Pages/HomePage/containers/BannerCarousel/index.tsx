@@ -1,10 +1,10 @@
 import "./bannerCarousel.css";
-import slider1Image from "../../images/slider/slider-1.png"
-import slider2Image from "../../images/slider/slider-2.png"
-import slider3Image from "../../images/slider/slider-3.png"
-import slider4Image from "../../images/slider/slider-4.jpg"
-import slider5Image from "../../images/slider/slider-5.jpg"
-import Button from "../../components/Button";
+import slider1Image from "../../../../images/slider/slider-1.png"
+import slider2Image from "../../../../images/slider/slider-2.png"
+import slider3Image from "../../../../images/slider/slider-3.png"
+import slider4Image from "../../../../images/slider/slider-4.jpg"
+import slider5Image from "../../../../images/slider/slider-5.jpg"
+import Button from "../../../../components/Button";
 
 function BannerCarousel() {
   return (
