@@ -1,8 +1,8 @@
-import TextImageBox from "../../components/TextImageBox";
 import BannerCarousel from "./containers/BannerCarousel";
 import CustomOrder from "../../containers/CustomOrder";
 import MadeWithLove from "./containers/MadeWithLove";
 import OfferOfWeek from "./containers/OfferOfWeek";
+import CompleteMenuBox from "./containers/CompleteMenuBox";
 
 function HomePage() {
   return (
@@ -10,6 +10,7 @@ function HomePage() {
       <BannerCarousel />
       <OfferOfWeek/>
       <MadeWithLove />
+      <CompleteMenuBox/>
       <CustomOrder />
     </>
   );

@@ -1,4 +1,3 @@
-import React from "react";
 import iceCreamElement from "../../../../images/elements/icecream_element.png";
 import cakeElement from "../../../../images/elements/cake_element.png";
 import backgroundImage from "../../../../images/backgrounds/background1.png";

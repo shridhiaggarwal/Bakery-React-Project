@@ -7,12 +7,14 @@ interface ITitleSubtitleButtonBoxProps {
   subtitle?: string;
   buttonText?: string;
   textAlign?: string;
+  textBoxWidth?: string;
 }
 
 const TextBox = styled.div<{
+  width?: string;
   textAlign?: string;
 }>`
-  width: 600px;
+  width: ${(props) => (props.width ? props.width : "600px")};
   text-align: ${(props) => props.textAlign};
 `;
 
@@ -29,10 +31,10 @@ const TextBoxSubtitle = styled.p`
 `;
 
 function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
-  const { title, subtitle, buttonText, textAlign } = props;
+  const { title, subtitle, buttonText, textAlign, textBoxWidth } = props;
 
   return (
-    <TextBox textAlign={textAlign}>
+    <TextBox textAlign={textAlign} width={textBoxWidth}>
       <TextBoxTitle>{title}</TextBoxTitle>
       {subtitle && <TextBoxSubtitle>{subtitle}</TextBoxSubtitle>}
       {buttonText && <Button>{buttonText}</Button>}

@@ -1,26 +1,39 @@
 import React from "react";
-import customOrderStyles from "./customOrder.module.css";
-import Button from "../../components/Button";
 import cupcakeElement from "../../images/elements/cupcake_element.png";
+import styled from "styled-components";
+import TitleSubtitleButtonBox from "../../components/TitleSubtitleButtonBox";
+import ImageBox from "../../components/ImageBox";
+
+const CustomOrderSection = styled.section`
+  background-color: #faf6f2;
+  border: 4px solid #da5162;
+  border-radius: 8px;
+  margin: 80px 160px;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+`;
 
 function CustomOrder() {
   return (
-    <section className={customOrderStyles.customOrder}>
-      <div className={customOrderStyles.customOrderImage}>
-        <img src={cupcakeElement} />
-      </div>
-      <div className={customOrderStyles.customOrderText}>
-        <h4>Custom Orders</h4>
-        <p>
-          At our bakery, we understand that everyone has unique tastes and
+    <CustomOrderSection>
+      <ImageBox
+        imageSrc={cupcakeElement}
+        margin="0 50px 0 0"
+        imageWidth="200px"
+      />
+      <TitleSubtitleButtonBox
+        title="Custom Orders"
+        subtitle="At our bakery, we understand that everyone has unique tastes and
           preferences. That's why we offer a custom order service that allows
           you to create a dessert that's uniquely yours. Whether it's a specific
           flavor or a particular design, we'll work with you to create something
-          truly special.
-        </p>
-        <Button>Contact us</Button>
-      </div>
-    </section>
+          truly special."
+        buttonText="Contact us"
+        textBoxWidth="100%"
+      />
+    </CustomOrderSection>
   );
 }
 

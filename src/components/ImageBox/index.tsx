@@ -5,11 +5,11 @@ interface IImageBoxProps {
   backgroundImageSrc?: string;
   imageSrc?: string;
   margin?: string;
+  imageWidth?: string;
 }
 
 const ImageSection = styled.div<{
   backgroundImageSrc?: string;
-  margin?: string;
 }>`
   height: 100%;
   width: 500px;
@@ -19,27 +19,27 @@ const ImageSection = styled.div<{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: ${(props) => props.margin};
 `;
 
 const ImageBoxImage = styled.img<{
+  width?: string;
   margin?: string;
 }>`
-  width: 300px;
+  width: ${(props) => (props.width ? props.width : "300px")};
   margin: ${(props) => props.margin};
 `;
 
 function ImageBox(props: IImageBoxProps) {
-  const { backgroundImageSrc, imageSrc, margin } = props;
+  const { backgroundImageSrc, imageSrc, margin, imageWidth } = props;
 
   return (
     <>
       {backgroundImageSrc ? (
-        <ImageSection backgroundImageSrc={backgroundImageSrc} margin={margin}>
-          <ImageBoxImage src={imageSrc} />
+        <ImageSection backgroundImageSrc={backgroundImageSrc}>
+          <ImageBoxImage src={imageSrc} margin={margin} width={imageWidth} />
         </ImageSection>
       ) : (
-        <ImageBoxImage src={imageSrc} margin={margin} />
+        <ImageBoxImage src={imageSrc} margin={margin} width={imageWidth} />
       )}
     </>
   );
