@@ -1,19 +1,19 @@
 import BannerCarousel from "./containers/BannerCarousel";
-import CustomOrder from "../../containers/CustomOrder";
-import MadeWithLove from "./containers/MadeWithLove";
 import OfferOfWeek from "./containers/OfferOfWeek";
-import CompleteMenuBox from "./containers/CompleteMenuBox";
+import MadeWithLove from "./containers/MadeWithLove";
 import ServicesPage from "../ServicesPage";
+import CompleteMenuBox from "./containers/CompleteMenuBox";
+import CustomOrder from "../../containers/CustomOrder";
 
 function HomePage() {
   return (
     <>
       <BannerCarousel />
       <OfferOfWeek/>
-      {/* <MadeWithLove />
-      <ServicesPage />
+      <MadeWithLove />
+      {/* <ServicesPage /> */}
       <CompleteMenuBox/>
-      <CustomOrder /> */}
+      <CustomOrder />
     </>
   );
 }

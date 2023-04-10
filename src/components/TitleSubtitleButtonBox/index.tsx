@@ -29,18 +29,6 @@ const TextBox = styled.div<{
   text-align: ${(props) => props.textAlign};
 `;
 
-const TextBoxTitle = styled.h4`
-  font-family: "Satisfy", "cursive";
-  font-size: 2.875rem;
-  font-weight: bolder;
-  color: #da5162;
-  margin-bottom: 1rem;
-`;
-
-const TextBoxSubtitle = styled.p`
-  font-family: "Montserrat", sans-serif;
-`;
-
 function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
   const { title, subtitle, buttonText, textAlign, textBoxWidth } = props;
 
@@ -66,8 +54,6 @@ function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
     <TextBox textAlign={textAlign} width={textBoxWidth}>
       <Typography {...titleProps}>{title.value}</Typography>
       {subtitle && <Typography {...subtitleProps}>{subtitle.value}</Typography>}
-      {/* <TextBoxTitle>{title}</TextBoxTitle>
-      {subtitle && <TextBoxSubtitle>{subtitle}</TextBoxSubtitle>} */}
       {buttonText && <Button>{buttonText}</Button>}
     </TextBox>
   );

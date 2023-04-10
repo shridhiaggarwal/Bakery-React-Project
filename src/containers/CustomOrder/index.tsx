@@ -13,12 +13,24 @@ const CustomOrderSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  @media only screen and (max-width: 1200px) {
+    margin: 80px;
+  }
+  @media only screen and (max-width: 992px) {
+    margin: 80px 20px;
+  }
+`;
+
+const StyledImageBox = styled(ImageBox)`
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 function CustomOrder() {
   return (
     <CustomOrderSection>
-      <ImageBox
+      <StyledImageBox
         imageSrc={cupcakeElement}
         margin="0 50px 0 0"
         imageWidth="200px"

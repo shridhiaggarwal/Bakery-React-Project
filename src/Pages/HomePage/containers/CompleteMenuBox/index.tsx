@@ -12,6 +12,20 @@ const CompleteMenuSection = styled.section`
   align-items: center;
   justify-content: center;
   padding: 20px 80px;
+  @media only screen and (max-width: 992px) {
+    padding: 20px;
+  }
+`;
+
+const StyledImageBox = styled(ImageBox)`
+  > img:first-child {
+    @media only screen and (max-width: 768px) {
+      width: 200px;
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    display: none;
+  }
 `;
 
 function CompleteMenuBox() {
@@ -31,7 +45,10 @@ function CompleteMenuBox() {
         }}
         buttonText="Explore complete menu"
       />
-      <ImageBox backgroundImageSrc={backgeroundImage} imageSrc={cakeElement} />
+      <StyledImageBox
+        backgroundImageSrc={backgeroundImage}
+        imageSrc={cakeElement}
+      />
     </CompleteMenuSection>
   );
 }

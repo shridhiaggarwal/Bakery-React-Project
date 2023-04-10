@@ -9,13 +9,28 @@ const MadeWithLoveSection = styled.section`
   align-items: center;
   justify-content: center;
   padding: 80px;
+  @media only screen and (max-width: 992px) {
+    padding: 80px 20px;
+  }
+`;
+
+const StyledImageBox = styled(ImageBox)`
+  @media only screen and (max-width: 992px) {
+    margin: 0 20px 0 0;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 200px;
+  }
+  @media only screen and (max-width: 576px) {
+    display: none;
+  }
 `;
 
 function MadeWithLove() {
   return (
     <>
       <MadeWithLoveSection>
-        <ImageBox imageSrc={cakeElement} margin={"0 80px 0 0"} />
+        <StyledImageBox imageSrc={cakeElement} margin={"0 80px 0 0"} />
         <TitleSubtitleButtonBox
           title={{
             value: "Made with love",
