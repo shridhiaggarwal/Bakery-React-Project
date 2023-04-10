@@ -1,69 +1,91 @@
 .footer {
-    background-color: #fdf2d2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 60px 80px;
+  background-color: #fdf2d2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 60px 80px;
+}
+
+.footer .footerLogoText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.footer .footerLogoText .footerLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.footer .footerLogoText .footerLogo h3 {
+  font-family: "Pacifico", cursive;
+  font-weight: bolder;
+  color: #da5162;
+}
+
+.footer .footerLogoText .footerText .footerField {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.footer .footerLogoText .footerText .footerField i {
+  color: #da5162;
+  margin-right: 12px;
+}
+
+.footer .footerLogoText .footerText .footerField p {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.footer .footerLogoText .footerText .socialIcons i {
+  width: 40px;
+  height: 40px;
+  background-color: #da5162;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border: 2px solid #da5162;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  margin-right: 16px;
+  transition: all 0.5s;
+}
+
+.footer .footerLogoText .footerText .socialIcons i:hover {
+  background-color: transparent;
+  border: 2px solid #da5162;
+  color: #da5162;
+}
+
+.footer .footerCopyRight {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+/* ============================= media queries css =========================*/
+
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+  .footer {
+    padding: 20px;
   }
-  
   .footer .footerLogoText {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 3rem;
-  }
-  
-  .footer .footerLogoText .footerLogo {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-right: 60px;
   }
-  
-  .footer .footerLogoText .footerLogo h3 {
-    font-family: "Pacifico", cursive;
-    font-weight: bolder;
-    color: #da5162;
+  .footer .footerLogoText .footerLogo {
+    margin-right: 0px;
+    margin-bottom: 1rem;
   }
-  
-  .footer .footerLogoText .footerText .footerField {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .footer .footerLogoText .footerText .footerField i {
-    color: #da5162;
-    margin-right: 12px;
-  }
-  
-  .footer .footerLogoText .footerText .footerField p {
-    font-size: 0.875rem;
-    font-weight: bold;
-  }
-  
-  .footer .footerLogoText .footerText .socialIcons i {
-    width: 40px;
-    height: 40px;
-    background-color: #da5162;
-    color: white;
+  .footer .footerLogoText .footerText .socialIcons {
     text-align: center;
-    padding: 8px;
-    border: 2px solid #da5162;
-    border-radius: 50%;
-    font-size: 1.25rem;
-    margin-right: 16px;
-    transition: all 0.5s;
   }
-  
-  .footer .footerLogoText .footerText .socialIcons i:hover {
-    background-color: transparent;
-    border: 2px solid #da5162;
-    color: #da5162;
-  }
-  
   .footer .footerCopyRight {
-    font-size: 0.875rem;
-    font-weight: bold;
+    text-align: center;
   }
+}

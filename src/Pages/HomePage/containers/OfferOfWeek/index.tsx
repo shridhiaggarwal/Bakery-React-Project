@@ -13,6 +13,10 @@ const OfferOfWeekSection = styled.section`
   justify-content: center;
   position: relative;
   padding: 20px 80px;
+  min-width: 0;
+  @media only screen and (max-width: 992px) {
+    padding: 20px;
+  }
 `;
 
 const ElementImage = styled.img`
@@ -21,6 +25,15 @@ const ElementImage = styled.img`
   left: 5%;
   height: 200px;
   transform: rotate(-28deg);
+  @media only screen and (max-width: 576px) {
+    display: none;
+  }
+`;
+
+const StyledImageBox = styled(ImageBox)`
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 function OfferOfWeek() {
@@ -29,12 +42,24 @@ function OfferOfWeek() {
       <OfferOfWeekSection>
         <ElementImage src={iceCreamElement} />
         <TitleSubtitleButtonBox
-          title="Offer of the Week"
-          subtitle="Treat yourself with our delicious offer of the week - buy any dessert and get a scoop of ice cream for free."
+          title={{
+            value: "Offer of the Week",
+            variant: "h4",
+            color: "#da5162",
+            margin: "0 0 1rem 0",
+          }}
+          subtitle={{
+            value:
+              "Treat yourself with our delicious offer of the week - buy any dessert and get a scoop of ice cream for free.",
+            variant: "body1",
+          }}
           buttonText="Check our menu"
           textAlign="center"
         />
-        <ImageBox backgroundImageSrc={backgroundImage} imageSrc={cakeElement} />
+        <StyledImageBox
+          backgroundImageSrc={backgroundImage}
+          imageSrc={cakeElement}
+        />
       </OfferOfWeekSection>
     </>
   );

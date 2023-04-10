@@ -1,13 +1,33 @@
-import React from "react";
-import buttonStyles from './button.module.css'
+import styled from "styled-components";
 
 interface IButtonProps {
   children: string;
 }
 
+const StyledButton = styled.button`
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 8px 24px;
+  background-color: #da5162;
+  color: white;
+  border: 2px solid #da5162;
+  border-radius: 8px;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  &:hover,
+  &:active {
+    background-color: transparent;
+    color: #da5162;
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+`;
+
 function Button(props: IButtonProps) {
   const { children } = props;
-  return <button className={buttonStyles.commonButton}>{children}</button>;
+  return <StyledButton>{children}</StyledButton>;
 }
 
 export default Button;

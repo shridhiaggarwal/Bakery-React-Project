@@ -17,8 +17,17 @@ function MadeWithLove() {
       <MadeWithLoveSection>
         <ImageBox imageSrc={cakeElement} margin={"0 80px 0 0"} />
         <TitleSubtitleButtonBox
-          title="Made with love"
-          subtitle="At Bakery, we believe that the secret ingredient to our baked goods is love. That's why we put our heart and soul into every item we make, from the freshest ingredients to the final touches of decoration. We hope you can taste the love we put into each and every bite."
+          title={{
+            value: "Made with love",
+            variant: "h4",
+            color: "#da5162",
+            margin: "0 0 1rem 0",
+          }}
+          subtitle={{
+            value:
+              "At Bakery, we believe that the secret ingredient to our baked goods is love. That's why we put our heart and soul into every item we make, from the freshest ingredients to the final touches of decoration. We hope you can taste the love we put into each and every bite.",
+            variant: "body1",
+          }}
           buttonText="Read more"
         />
       </MadeWithLoveSection>

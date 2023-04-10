@@ -1,10 +1,11 @@
 import "./bannerCarousel.css";
-import slider1Image from "../../../../images/slider/slider-1.png"
-import slider2Image from "../../../../images/slider/slider-2.png"
-import slider3Image from "../../../../images/slider/slider-3.png"
-import slider4Image from "../../../../images/slider/slider-4.jpg"
-import slider5Image from "../../../../images/slider/slider-5.jpg"
+import slider1Image from "../../../../images/slider/slider-1.png";
+import slider2Image from "../../../../images/slider/slider-2.png";
+import slider3Image from "../../../../images/slider/slider-3.png";
+import slider4Image from "../../../../images/slider/slider-4.jpg";
+import slider5Image from "../../../../images/slider/slider-5.jpg";
 import Button from "../../../../components/Button";
+import Typography from "../../../../components/Typography";
 
 function BannerCarousel() {
   return (
@@ -32,7 +33,7 @@ function BannerCarousel() {
               <p>
                 We bake with love and passion to bring you the best flavors.
               </p>
-              <Button>our menu</Button>
+              <Button>Our menu</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -43,7 +44,7 @@ function BannerCarousel() {
                 We offer catering services for any kind of event! Contact us to
                 make an order
               </p>
-              <Button>our services</Button>
+              <Button>Our services</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -53,7 +54,7 @@ function BannerCarousel() {
               <p>
                 Satisfy your sweet cravings with our delectable bakery delights.
               </p>
-              <Button>contact us</Button>
+              <Button>Contact us</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -64,7 +65,7 @@ function BannerCarousel() {
                 Get a taste of heaven with our handcrafted pastries and
                 desserts.
               </p>
-              <Button>our menu</Button>
+              <Button>Our menu</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -72,7 +73,7 @@ function BannerCarousel() {
             <div className="carousel-caption">
               <h3>We love Cupcakes</h3>
               <p>Join us for a cup of coffee and a bite of heaven.</p>
-              <Button>contact us</Button>
+              <Button>Contact us</Button>
             </div>
           </div>
         </div>

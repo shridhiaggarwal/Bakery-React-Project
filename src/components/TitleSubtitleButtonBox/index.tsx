@@ -1,10 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../Button";
+import Typography, { variantsMapping } from "../Typography";
+
+interface ITypographyProps {
+  value: string;
+  variant: keyof typeof variantsMapping;
+  color?: string;
+  fontFamily?: string;
+  fontWeight?: string;
+  margin?: string;
+  padding?: string;
+}
 
 interface ITitleSubtitleButtonBoxProps {
-  title: string;
-  subtitle?: string;
+  title: ITypographyProps;
+  subtitle?: ITypographyProps;
   buttonText?: string;
   textAlign?: string;
   textBoxWidth?: string;
@@ -33,10 +44,30 @@ const TextBoxSubtitle = styled.p`
 function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
   const { title, subtitle, buttonText, textAlign, textBoxWidth } = props;
 
+  const titleProps = {
+    variant: title.variant,
+    color: title.color,
+    fontFamily: title.fontFamily,
+    fontWeight: title.fontWeight,
+    margin: title.margin,
+    padding: title.padding,
+  };
+
+  const subtitleProps = {
+    variant: subtitle && subtitle.variant,
+    color: subtitle && subtitle.color,
+    fontFamily: subtitle && subtitle.fontFamily,
+    fontWeight: subtitle && subtitle.fontWeight,
+    margin: subtitle && subtitle.margin,
+    padding: subtitle && subtitle.padding,
+  };
+
   return (
     <TextBox textAlign={textAlign} width={textBoxWidth}>
-      <TextBoxTitle>{title}</TextBoxTitle>
-      {subtitle && <TextBoxSubtitle>{subtitle}</TextBoxSubtitle>}
+      <Typography {...titleProps}>{title.value}</Typography>
+      {subtitle && <Typography {...subtitleProps}>{subtitle.value}</Typography>}
+      {/* <TextBoxTitle>{title}</TextBoxTitle>
+      {subtitle && <TextBoxSubtitle>{subtitle}</TextBoxSubtitle>} */}
       {buttonText && <Button>{buttonText}</Button>}
     </TextBox>
   );
