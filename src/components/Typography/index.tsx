@@ -18,6 +18,7 @@ const StyledH1 = styled.h1<{
   fontWeight?: string | number;
   margin?: string;
   padding?: string;
+  textAlign?: string;
 }>`
   color: ${(props) => (props.color ? props.color : "#666666")};
   font-family: ${(props) =>
@@ -26,6 +27,7 @@ const StyledH1 = styled.h1<{
   font-weight: ${(props) => (props.fontWeight ? props.fontWeight : "bolder")};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textAlign};
   @media (max-width: 992px) {
     font-size: 2.875rem;
   }
@@ -37,6 +39,7 @@ const StyledH2 = styled.h2<{
   fontWeight?: string | number;
   margin?: string;
   padding?: string;
+  textAlign?: string;
 }>`
   color: ${(props) => (props.color ? props.color : "#666666")};
   font-family: ${(props) =>
@@ -45,6 +48,7 @@ const StyledH2 = styled.h2<{
   font-weight: ${(props) => (props.fontWeight ? props.fontWeight : "bolder")};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textAlign};
   @media (max-width: 992px) {
     font-size: 2.875rem;
   }
@@ -56,6 +60,7 @@ const StyledH3 = styled.h3<{
   fontWeight?: string | number;
   margin?: string;
   padding?: string;
+  textAlign?: string;
   lineHeight?: string;
 }>`
   color: ${(props) => (props.color ? props.color : "#666666")};
@@ -65,9 +70,11 @@ const StyledH3 = styled.h3<{
   font-weight: ${(props) => props.fontWeight};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textAlign};
   line-height: ${(props) => (props.lineHeight ? props.lineHeight : "52px")};
   @media (max-width: 576px) {
     font-size: 1.75rem;
+    line-height: initial;
   }
 `;
 
@@ -77,6 +84,7 @@ const StyledH4 = styled.h4<{
   fontWeight?: string | number;
   margin?: string;
   padding?: string;
+  textAlign?: string;
 }>`
   color: ${(props) => (props.color ? props.color : "#666666")};
   font-family: ${(props) =>
@@ -85,6 +93,7 @@ const StyledH4 = styled.h4<{
   font-weight: ${(props) => props.fontWeight ? props.fontWeight : "bolder"};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textAlign};
 `;
 
 const StyledH5 = styled.h5<{
@@ -93,6 +102,7 @@ const StyledH5 = styled.h5<{
   fontWeight?: string | number;
   margin?: string;
   padding?: string;
+  textAlign?: string;
 }>`
   color: ${(props) => (props.color ? props.color : "#666666")};
   font-family: ${(props) =>
@@ -101,6 +111,7 @@ const StyledH5 = styled.h5<{
   font-weight: ${(props) => props.fontWeight};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textAlign};
 `;
 
 const StyledH6 = styled.h6<{
@@ -109,6 +120,7 @@ const StyledH6 = styled.h6<{
   fontWeight?: string | number;
   margin?: string;
   padding?: string;
+  textAlign?: string;
 }>`
   color: ${(props) => (props.color ? props.color : "#666666")};
   font-family: ${(props) =>
@@ -117,6 +129,7 @@ const StyledH6 = styled.h6<{
   font-weight: ${(props) => props.fontWeight};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textAlign};
 `;
 
 const StyledBody1 = styled.p<{
@@ -125,6 +138,7 @@ const StyledBody1 = styled.p<{
   fontWeight?: string | number;
   margin?: string;
   padding?: string;
+  textAlign?: string;
 }>`
   color: ${(props) => (props.color ? props.color : "#666666")};
   font-family: ${(props) =>
@@ -133,6 +147,7 @@ const StyledBody1 = styled.p<{
   font-weight: ${(props) => props.fontWeight};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textAlign};
 `;
 
 const StyledCaption = styled.caption<{
@@ -141,6 +156,7 @@ const StyledCaption = styled.caption<{
   fontWeight?: string | number;
   margin?: string;
   padding?: string;
+  textAlign?: string;
 }>`
   color: ${(props) => (props.color ? props.color : "#666666")};
   font-family: ${(props) =>
@@ -149,6 +165,7 @@ const StyledCaption = styled.caption<{
   font-weight: ${(props) => props.fontWeight};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textAlign};
 `;
 
 interface ITypographyProps {
@@ -158,6 +175,8 @@ interface ITypographyProps {
   fontWeight?: string;
   margin?: string;
   padding?: string;
+  textAlign?: string;
+  lineHeight?: string;
   children: any;
 }
 

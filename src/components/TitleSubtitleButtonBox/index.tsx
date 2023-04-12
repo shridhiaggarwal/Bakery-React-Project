@@ -14,11 +14,12 @@ interface ITypographyProps {
 }
 
 interface ITitleSubtitleButtonBoxProps {
-  title: ITypographyProps;
+  title?: ITypographyProps;
   subtitle?: ITypographyProps;
   buttonText?: string;
   textAlign?: string;
   textBoxWidth?: string;
+  customTitle?: React.ReactNode;
 }
 
 const TextBox = styled.div<{
@@ -30,15 +31,16 @@ const TextBox = styled.div<{
 `;
 
 function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
-  const { title, subtitle, buttonText, textAlign, textBoxWidth } = props;
+  const { title, subtitle, buttonText, textAlign, textBoxWidth, customTitle } =
+    props;
 
   const titleProps = {
-    variant: title.variant,
-    color: title.color,
-    fontFamily: title.fontFamily,
-    fontWeight: title.fontWeight,
-    margin: title.margin,
-    padding: title.padding,
+    variant: title && title.variant,
+    color: title && title.color,
+    fontFamily: title && title.fontFamily,
+    fontWeight: title && title.fontWeight,
+    margin: title && title.margin,
+    padding: title && title.padding,
   };
 
   const subtitleProps = {
@@ -52,7 +54,11 @@ function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
 
   return (
     <TextBox textAlign={textAlign} width={textBoxWidth}>
-      <Typography {...titleProps}>{title.value}</Typography>
+      {customTitle ? (
+        customTitle
+      ) : (
+        <Typography {...titleProps}>{title && title.value}</Typography>
+      )}
       {subtitle && <Typography {...subtitleProps}>{subtitle.value}</Typography>}
       {buttonText && <Button>{buttonText}</Button>}
     </TextBox>

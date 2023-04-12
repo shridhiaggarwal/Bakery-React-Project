@@ -5,7 +5,6 @@ import slider3Image from "../../../../images/slider/slider-3.png";
 import slider4Image from "../../../../images/slider/slider-4.jpg";
 import slider5Image from "../../../../images/slider/slider-5.jpg";
 import Button from "../../../../components/Button";
-import Typography from "../../../../components/Typography";
 
 function BannerCarousel() {
   return (
