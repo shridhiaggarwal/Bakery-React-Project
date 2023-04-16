@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
 import ImageBox from "../../../../components/ImageBox";
-import cakeElement from "../../../../images/elements/cake_element4.png";
-import backgeroundImage from "../../../../images/backgrounds/background1.png";
+import Images from "../../../../components/Images"
 
 const CompleteMenuSection = styled.section`
   height: 360px;
@@ -46,8 +45,8 @@ function CompleteMenuBox() {
         buttonText="Explore complete menu"
       />
       <StyledImageBox
-        backgroundImageSrc={backgeroundImage}
-        imageSrc={cakeElement}
+        backgroundImageSrc={Images.BACKGROUND1}
+        imageSrc={Images.CAKE_ELEMENT4}
       />
     </CompleteMenuSection>
   );

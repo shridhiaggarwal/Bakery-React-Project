@@ -1,9 +1,7 @@
-import iceCreamElement from "../../../../images/elements/icecream_element.png";
-import cakeElement from "../../../../images/elements/cake_element.png";
-import backgroundImage from "../../../../images/backgrounds/background1.png";
 import styled from "styled-components";
 import ImageBox from "../../../../components/ImageBox";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
+import Images from "../../../../components/Images";
 
 const OfferOfWeekSection = styled.section`
   height: 360px;
@@ -40,7 +38,7 @@ function OfferOfWeek() {
   return (
     <>
       <OfferOfWeekSection>
-        <ElementImage src={iceCreamElement} />
+        <ElementImage src={Images.ICECREAM_ELEMENT1} />
         <TitleSubtitleButtonBox
           title={{
             value: "Offer of the Week",
@@ -57,8 +55,8 @@ function OfferOfWeek() {
           textAlign="center"
         />
         <StyledImageBox
-          backgroundImageSrc={backgroundImage}
-          imageSrc={cakeElement}
+          backgroundImageSrc={Images.BACKGROUND1}
+          imageSrc={Images.CAKE_ELEMENT1}
         />
       </OfferOfWeekSection>
     </>

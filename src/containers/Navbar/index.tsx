@@ -1,13 +1,13 @@
 import "./navbar.css";
-import whiteLogo from "../../images/whiteLogo.png";
 import { Link, NavLink } from "react-router-dom";
+import Images from "../../components/Images";
 
 function Navbar() {
   return (
     <>
       <nav id="home" className="navbar navbar-expand-lg fixed-top">
         <Link className="navbar-brand" to="/">
-          <img src={whiteLogo} />
+          <img src={Images.WHITE_LOGO} />
           <h3 className="navbar-text">Bakery!</h3>
         </Link>
         <button
