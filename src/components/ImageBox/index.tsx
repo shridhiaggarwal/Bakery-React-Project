@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface IImageBoxProps {
+  className?: string;
   backgroundImageSrc?: string;
   imageSrc?: string;
   margin?: string;
@@ -30,16 +31,16 @@ const ImageBoxImage = styled.img<{
 `;
 
 function ImageBox(props: IImageBoxProps) {
-  const { backgroundImageSrc, imageSrc, margin, imageWidth } = props;
+  const { className, backgroundImageSrc, imageSrc, margin, imageWidth } = props;
 
   return (
     <>
       {backgroundImageSrc ? (
-        <ImageSection backgroundImageSrc={backgroundImageSrc}>
+        <ImageSection backgroundImageSrc={backgroundImageSrc} className={className}>
           <ImageBoxImage src={imageSrc} margin={margin} width={imageWidth} />
         </ImageSection>
       ) : (
-        <ImageBoxImage src={imageSrc} margin={margin} width={imageWidth} />
+        <ImageBoxImage className={className} src={imageSrc} margin={margin} width={imageWidth} />
       )}
     </>
   );

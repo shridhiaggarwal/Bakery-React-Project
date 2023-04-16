@@ -61,12 +61,12 @@ function TextImageBox(props: ITextImageBoxProps) {
           margin={imageBoxContent.margin}
         />
       )}
-      <TitleSubtitleButtonBox
+      {/* <TitleSubtitleButtonBox
         title={textBoxContent.title}
         subtitle={textBoxContent.subtitle}
         buttonText={textBoxContent.buttonText}
         textAlign={textBoxContent.textAlign}
-      />
+      /> */}
       {imageBoxContent.rightImageSrc && (
         <ImageBox
           backgroundImageSrc={imageBoxContent.backgroundImageSrc}
