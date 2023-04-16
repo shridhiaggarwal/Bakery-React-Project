@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface IButtonProps {
   children: string;
+  onButtonClick: () => void;
 }
 
 const StyledButton = styled.button`
@@ -26,8 +27,13 @@ const StyledButton = styled.button`
 `;
 
 function Button(props: IButtonProps) {
-  const { children } = props;
-  return <StyledButton>{children}</StyledButton>;
+  const { children, onButtonClick } = props;
+
+  const handleClick = () => {
+    onButtonClick();
+  };
+
+  return <StyledButton onClick={handleClick}>{children}</StyledButton>;
 }
 
 export default Button;

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
 import Button from "../../../../components/Button";
+import { useNavigate } from "react-router";
 
 interface IServiceCardProps {
   title: string;
@@ -49,6 +50,11 @@ const StyledServiceImage = styled.img`
 
 function ServiceCard(props: IServiceCardProps) {
   const { title, subtitle, imageSrc } = props;
+  const navigate = useNavigate();
+
+  const handleServiceButton = () => {
+    navigate("/services");
+  };
 
   return (
     <StyledServiceCard>
@@ -68,7 +74,7 @@ function ServiceCard(props: IServiceCardProps) {
         textAlign="center"
         textBoxWidth="100%"
       />
-      <Button>More</Button>
+      <Button onButtonClick={handleServiceButton}>More</Button>
     </StyledServiceCard>
   );
 }

@@ -3,6 +3,7 @@ import ImageBox from "../../../../components/ImageBox";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
 import Typography from "../../../../components/Typography";
 import Images from "../../../../components/Images";
+import { useNavigate } from "react-router";
 
 const StyledServiceBox = styled.div`
   display: flex;
@@ -24,6 +25,12 @@ const StyledImageBox = styled(ImageBox)`
 `;
 
 function ServiceBox() {
+  const navigate = useNavigate();
+
+  const handleServiceButton = () => {
+    navigate("/services");
+  };
+
   const getSeriveBoxTitle = () => {
     return (
       <>
@@ -48,7 +55,10 @@ function ServiceBox() {
             "Our services don't just stop at baking. We also offer catering for events and gatherings, with options to fit any budget and dietary restrictions. From savory sandwiches to sweet treats, we can provide everything you need to make your event a success.",
           variant: "body1",
         }}
-        buttonText="Read more"
+        button={{
+          text: "Read more",
+          onClick: handleServiceButton
+        }}
       />
       <StyledImageBox imageSrc={Images.CAKE_ELEMENT2} margin="0 0 0 80px" />
     </StyledServiceBox>

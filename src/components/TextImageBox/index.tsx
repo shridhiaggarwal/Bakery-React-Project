@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import ImageBox from "../ImageBox";
-import TitleSubtitleButtonBox from "../TitleSubtitleButtonBox";
 
 interface ITextImageBoxProps {
   height?: string;

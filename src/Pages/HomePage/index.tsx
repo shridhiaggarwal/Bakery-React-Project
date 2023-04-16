@@ -13,7 +13,7 @@ function HomePage() {
       <BannerCarousel />
       <OfferOfWeek/>
       <MadeWithLove />
-      <ServicesPage />
+      <ServicesPage homepageSection={true}/>
       <QuoteBox />
       <MenuHomePage />
       <CompleteMenuBox/>

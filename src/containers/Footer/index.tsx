@@ -25,13 +25,13 @@ function Footer() {
             <p>Mon-Sat: 9 A.M. - 5 P.M.</p>
           </div>
           <div className="socialIcons">
-            <a href="#">
+            <a href="/">
               <i className="fa fa-facebook"></i>
             </a>
-            <a href="#">
+            <a href="/">
               <i className="fa fa-youtube-play"></i>
             </a>
-            <a href="#">
+            <a href="/">
               <i className="fa fa-twitter"></i>
             </a>
           </div>
