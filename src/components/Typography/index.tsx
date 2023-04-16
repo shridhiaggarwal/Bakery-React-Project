@@ -90,7 +90,7 @@ const StyledH4 = styled.h4<{
   font-family: ${(props) =>
     props.fontFamily ? props.fontFamily : "Satisfy, cursive"};
   font-size: 2.875rem;
-  font-weight: ${(props) => props.fontWeight ? props.fontWeight : "bolder"};
+  font-weight: ${(props) => (props.fontWeight ? props.fontWeight : "bolder")};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   text-align: ${(props) => props.textAlign};
@@ -243,6 +243,7 @@ function Typography(props: ITypographyProps) {
 export default Typography;
 
 /* 
+old
 caption 14px; 0.875rem - only nav and captions
 body 16px; 1rem - body default
 h6 20px; 1.25rem - small heading - bannerCarousel p
@@ -250,144 +251,4 @@ h5 28px; 1.75rem - service box h6, quote box
 32px 2rem
 h4 46px; 2.875rem - large heading - made with love, services
 h3 64px; 4rem - extra large heading- bannerCarousel 
-
-h3
-.bannerCarousel .carousel-caption h3 {
-  font-family: "Satisfy", cursive;
-  font-weight: bolder;
-  font-size: 4rem;
-}
-.footer .footerLogoText .footerLogo h3 {
-  font-family: "Pacifico", cursive;
-  font-weight: bolder;
-}
-for max-width: 992px
-.bannerCarousel .carousel-caption h3 {
-    font-size: 2.875rem;
-  }
-
-  h4
-  .offerOfWeekText h4 {
-  font-family: "Satisfy", "cursive";
-  font-size: 2.875rem;
-  font-weight: bolder;
-  color: #da5162;
-  margin-bottom: 1rem;
-}
-.madeWithLoveText h4 {
-  font-family: "Satisfy", "cursive";
-  font-size: 2.875rem;
-  font-weight: bolder;
-  color: #da5162;
-  margin-bottom: 1rem;
-}
-.service h4 {
-  text-align: center;
-  font-family: "Satisfy", "cursive";
-  font-size: 2.875rem;
-  font-weight: bolder;
-  color: #da5162;
-  margin-bottom: 4rem;
-}
-.serviceCard .serviceCardText h4 {
-  font-family: "Satisfy", "cursive";
-  font-size: 1.75rem;
-  font-weight: bold;
-  color: #da5162;
-  margin-bottom: 1rem;
-}
-.quoteBox h4 {
-  font-family: "Satisfy", "cursive";
-  font-size: 1.75rem;
-  font-weight: bolder;
-  color: #da5162;
-}
-.menu h4 {
-  text-align: center;
-  font-family: "Satisfy", "cursive";
-  font-size: 2.875rem;
-  font-weight: bolder;
-  color: #da5162;
-  margin-bottom: 2rem;
-}
-.completeMenuBox .completeMenuText h4 {
-  font-family: "Satisfy", "cursive";
-  font-size: 2.875rem;
-  font-weight: bolder;
-  color: #da5162;
-  margin-bottom: 1rem;
-}
-.customOrder .customOrderText h4 {
-  font-family: "Satisfy", "cursive";
-  font-size: 2.875rem;
-  font-weight: bolder;
-  color: #da5162;
-  margin-bottom: 1rem;
-}
-
-h5
-  .serviceBoxText h5 {
-  font-family: "Paytone One", sans-serif;
-  font-size: 2.875rem;
-  margin-bottom: 1.5rem;
-  color: #da5162;
-  line-height: 52px;
-}
-max-width: 576px
-.serviceBoxText h5 {
-    font-size: 1.75rem;
-    line-height: initial;
-  }
-
-  h6
-  .serviceBoxText h6 {
-  font-family: "Satisfy", sans-serif;
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-}
-.menuCard .menuCardText .menuNamePrice h6 {
-  font-family: "Satisfy", "cursive";
-  font-size: 1.75rem;
-  font-weight: bold;
-  color: #da5162;
-}
-
-p
-.bannerCarousel .carousel-caption p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-.offerOfWeekText p {
-  font-family: "Montserrat", sans-serif;
-}
-.madeWithLoveText p {
-  font-family: "Montserrat", sans-serif;
-}
-.serviceBoxText p {
-  font-family: "Montserrat", sans-serif;
-}
-.menuBoxText p {
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 80px;
-  text-align: center;
-}
-.menuCard .menuCardText .menuNamePrice p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-}
-.completeMenuBox .completeMenuText p {
-  font-family: "Montserrat", sans-serif;
-}
-.customOrder .customOrderText p {
-  font-family: "Montserrat", sans-serif;
-}
-.footer .footerLogoText .footerText .footerField p {
-  font-size: 0.875rem;
-  font-weight: bold;
-}
-max-width: 576px
-.bannerCarousel .carousel-caption p {
-    display: none;
-  }
 */
