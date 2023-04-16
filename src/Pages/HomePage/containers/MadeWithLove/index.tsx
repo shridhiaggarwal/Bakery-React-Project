@@ -1,8 +1,8 @@
 import React from "react";
-import cakeElement from "../../../../images/elements/cupcake_element2.png";
 import styled from "styled-components";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
 import ImageBox from "../../../../components/ImageBox";
+import Images from "../../../../components/Images";
 
 const MadeWithLoveSection = styled.section`
   display: flex;
@@ -30,7 +30,7 @@ function MadeWithLove() {
   return (
     <>
       <MadeWithLoveSection>
-        <StyledImageBox imageSrc={cakeElement} margin={"0 80px 0 0"} />
+        <StyledImageBox imageSrc={Images.CUPCAKE_ELEMENT2} margin={"0 80px 0 0"} />
         <TitleSubtitleButtonBox
           title={{
             value: "Made with love",

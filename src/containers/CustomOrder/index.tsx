@@ -1,8 +1,8 @@
 import React from "react";
-import cupcakeElement from "../../images/elements/cupcake_element.png";
 import styled from "styled-components";
 import TitleSubtitleButtonBox from "../../components/TitleSubtitleButtonBox";
 import ImageBox from "../../components/ImageBox";
+import Images from "../../components/Images"
 
 const CustomOrderSection = styled.section`
   background-color: #faf6f2;
@@ -31,7 +31,7 @@ function CustomOrder() {
   return (
     <CustomOrderSection>
       <StyledImageBox
-        imageSrc={cupcakeElement}
+        imageSrc={Images.CUPCAKE_ELEMENT1}
         margin="0 50px 0 0"
         imageWidth="200px"
       />

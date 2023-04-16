@@ -1,5 +1,5 @@
 import "./footer.css";
-import yellowLogo from "../../images/logo_yellow.png";
+import Images from "../../components/Images";
 
 function Footer() {
   return (
@@ -7,7 +7,7 @@ function Footer() {
       <div className="footerLogoText">
         <div className="footerLogo">
           <a href="#home">
-            <img src={yellowLogo} />
+            <img src={Images.PINK_LOGO} />
           </a>
           <h3>Bakery!</h3>
         </div>

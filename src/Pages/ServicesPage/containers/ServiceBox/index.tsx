@@ -1,8 +1,8 @@
-import cakeImage from "../../../../images/elements/cake_element2.png";
 import styled from "styled-components";
 import ImageBox from "../../../../components/ImageBox";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
 import Typography from "../../../../components/Typography";
+import Images from "../../../../components/Images";
 
 const StyledServiceBox = styled.div`
   display: flex;
@@ -50,7 +50,7 @@ function ServiceBox() {
         }}
         buttonText="Read more"
       />
-      <StyledImageBox imageSrc={cakeImage} margin="0 0 0 80px" />
+      <StyledImageBox imageSrc={Images.CAKE_ELEMENT2} margin="0 0 0 80px" />
     </StyledServiceBox>
   );
 }

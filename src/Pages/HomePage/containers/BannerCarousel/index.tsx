@@ -1,10 +1,6 @@
 import "./bannerCarousel.css";
-import slider1Image from "../../../../images/slider/slider-1.png";
-import slider2Image from "../../../../images/slider/slider-2.png";
-import slider3Image from "../../../../images/slider/slider-3.png";
-import slider4Image from "../../../../images/slider/slider-4.jpg";
-import slider5Image from "../../../../images/slider/slider-5.jpg";
 import Button from "../../../../components/Button";
+import Images from "../../../../components/Images"
 
 function BannerCarousel() {
   return (
@@ -26,7 +22,7 @@ function BannerCarousel() {
         {/* The slideshow */}
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={slider1Image} alt="cake" />
+            <img src={Images.SLIDER1} alt="cake" />
             <div className="carousel-caption">
               <h3>Welcome to Bakery!</h3>
               <p>
@@ -36,7 +32,7 @@ function BannerCarousel() {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={slider2Image} alt="macron" />
+            <img src={Images.SLIDER2} alt="macron" />
             <div className="carousel-caption">
               <h3>Catering Services</h3>
               <p>
@@ -47,7 +43,7 @@ function BannerCarousel() {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={slider3Image} alt="pastry" />
+            <img src={Images.SLIDER3} alt="pastry" />
             <div className="carousel-caption">
               <h3>Yummy!</h3>
               <p>
@@ -57,7 +53,7 @@ function BannerCarousel() {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={slider4Image} alt="chocolate pastry" />
+            <img src={Images.SLIDER4} alt="chocolate pastry" />
             <div className="carousel-caption">
               <h3>Creating Memories, Delicious Bites</h3>
               <p>
@@ -68,7 +64,7 @@ function BannerCarousel() {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={slider5Image} alt="cupcake" />
+            <img src={Images.SLIDER5} alt="cupcake" />
             <div className="carousel-caption">
               <h3>We love Cupcakes</h3>
               <p>Join us for a cup of coffee and a bite of heaven.</p>

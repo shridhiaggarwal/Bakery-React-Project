@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ImageBox from "../../../../components/ImageBox";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
-import backgroundImage2 from "../../../../images/backgrounds/background2.png";
-import donutImage from "../../../../images/elements/donut_element.png";
+import Images from "../../../../components/Images"
 
 const QuoteBoxSection = styled.section`
   height: 360px;
@@ -11,7 +10,7 @@ const QuoteBoxSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(${backgroundImage2});
+  background-image: url(${Images.BACKGROUND2});
   background-repeat: no-repeat;
   background-position: left;
   padding: 20px 80px;
@@ -35,7 +34,7 @@ const StyledImageBox = styled(ImageBox)`
 function QuoteBox() {
   return (
     <QuoteBoxSection>
-      <StyledImageBox imageSrc={donutImage} margin="0 80px 0 0" />
+      <StyledImageBox imageSrc={Images.DONUT_ELEMENT1} margin="0 80px 0 0" />
       <TitleSubtitleButtonBox
         title={{
           value:

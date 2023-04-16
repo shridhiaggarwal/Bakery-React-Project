@@ -1,13 +1,13 @@
 import "./navbar.css";
-import pinkLogo from "../../images/logo_pink.png";
 import { Link, NavLink } from "react-router-dom";
+import Images from "../../components/Images";
 
 function Navbar() {
   return (
     <>
       <nav id="home" className="navbar navbar-expand-lg fixed-top">
         <Link className="navbar-brand" to="/">
-          <img src={pinkLogo} />
+          <img src={Images.WHITE_LOGO} />
           <h3 className="navbar-text">Bakery!</h3>
         </Link>
         <button
