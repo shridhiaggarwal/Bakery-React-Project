@@ -183,8 +183,6 @@ interface ITypographyProps {
 function Typography(props: ITypographyProps) {
   const { variant, color, children, ...rest } = props;
 
-  console.log("props", props);
-
   if (variant === "h1") {
     return (
       <StyledH1 color={color} {...rest}>

@@ -3,7 +3,7 @@ import OfferOfWeek from "./containers/OfferOfWeek";
 import MadeWithLove from "./containers/MadeWithLove";
 import ServicesPage from "../ServicesPage";
 import QuoteBox from "./containers/QuoteBox";
-import MenuPage from "../MenuPage";
+import MenuHomePage from "./containers/MenuHomePage";
 import CompleteMenuBox from "./containers/CompleteMenuBox";
 import CustomOrder from "../../containers/CustomOrder";
 
@@ -15,7 +15,7 @@ function HomePage() {
       <MadeWithLove />
       <ServicesPage />
       <QuoteBox />
-      <MenuPage />
+      <MenuHomePage />
       <CompleteMenuBox/>
       <CustomOrder />
     </>

@@ -15,10 +15,19 @@ const QuoteBoxSection = styled.section`
   background-repeat: no-repeat;
   background-position: left;
   padding: 20px 80px;
+  @media only screen and (max-width: 992px) {
+    padding: 20px;
+  }
 `;
 
 const StyledImageBox = styled(ImageBox)`
+  @media only screen and (max-width: 992px) {
+    margin: 0 20px 0 0;
+  }
   @media only screen and (max-width: 768px) {
+    width: 200px;
+  }
+  @media only screen and (max-width: 576px) {
     display: none;
   }
 `;
@@ -26,10 +35,7 @@ const StyledImageBox = styled(ImageBox)`
 function QuoteBox() {
   return (
     <QuoteBoxSection>
-      <StyledImageBox
-        imageSrc={donutImage}
-        margin="0 80px 0 0"
-      />
+      <StyledImageBox imageSrc={donutImage} margin="0 80px 0 0" />
       <TitleSubtitleButtonBox
         title={{
           value:

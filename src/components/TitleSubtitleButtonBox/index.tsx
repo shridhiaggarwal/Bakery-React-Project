@@ -11,6 +11,7 @@ interface ITypographyProps {
   fontWeight?: string;
   margin?: string;
   padding?: string;
+  preLineWrapper?: boolean;
 }
 
 interface ITitleSubtitleButtonBoxProps {
@@ -28,6 +29,12 @@ const TextBox = styled.div<{
 }>`
   width: ${(props) => (props.width ? props.width : "600px")};
   text-align: ${(props) => props.textAlign};
+`;
+
+const PreLineWrapper = styled(Typography)<{
+  preLineWrapper?: boolean;
+}>`
+  white-space: ${(props) => props.preLineWrapper && "pre-line"};
 `;
 
 function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
@@ -59,7 +66,14 @@ function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
       ) : (
         <Typography {...titleProps}>{title && title.value}</Typography>
       )}
-      {subtitle && <Typography {...subtitleProps}>{subtitle.value}</Typography>}
+      {subtitle && (
+        <PreLineWrapper
+          {...subtitleProps}
+          preLineWrapper={subtitle.preLineWrapper}
+        >
+          {subtitle.value}
+        </PreLineWrapper>
+      )}
       {buttonText && <Button>{buttonText}</Button>}
     </TextBox>
   );
