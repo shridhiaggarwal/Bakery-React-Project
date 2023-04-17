@@ -3,10 +3,15 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./serviceCarousel.css";
-import ServiceCard from "../ServiceCard";
-import Images from "../../../../components/Images"
+import ServiceCard, { IServiceCardProps } from "../ServiceCard";
 
-function ServiceCarousel() {
+interface IServiceCarouselProps {
+  servicesData: Array<IServiceCardProps>;
+}
+
+function ServiceCarousel(props: IServiceCarouselProps) {
+  const { servicesData } = props;
+
   const options = {
     items: 3,
     margin: 20,
@@ -26,45 +31,6 @@ function ServiceCarousel() {
     },
   };
 
-  const servicesData = [
-    {
-      title: "Birthday Cakes",
-      subtitle:
-        "Make your loved one's birthday extra special with our delicious and beautifully decorated cakes!",
-      imageSrc: Images.SERVICE1,
-    },
-    {
-      title: "Special Cakes",
-      subtitle:
-        "Make your special occasion even more memorable with our custom cakes!",
-      imageSrc: Images.SERVICE2,
-    },
-    {
-      title: "Corporate Events",
-      subtitle:
-        "Impress your clients and colleagues with our delectable baked goods at your next corporate event.",
-      imageSrc: Images.SERVICE3,
-    },
-    {
-      title: "Cupcake & Sweets",
-      subtitle:
-        "Indulge your sweet tooth with our tempting cupcakes and sweets!",
-      imageSrc: Images.SERVICE4,
-    },
-    {
-      title: "Custom Orders",
-      subtitle:
-        "Looking for something special? Our talented bakers can create custom orders. Let us create something unique just for you.",
-      imageSrc: Images.SERVICE5,
-    },
-    {
-      title: "Quick Delivery",
-      subtitle:
-        "Need your baked goods in a hurry? No problem! We offer quick and reliable delivery services.",
-      imageSrc: Images.SERVICE6,
-    },
-  ];
-
   return (
     <div className="container serviceCarousel">
       <OwlCarousel
@@ -82,13 +48,15 @@ function ServiceCarousel() {
             }}
           >
             {servicesData.map((service) => {
-              const { title, subtitle, imageSrc } = service;
+              const { title, subtitle, imageSrc, buttonText, buttonOnclick } = service;
               return (
                 <div className="owl-item">
                   <ServiceCard
                     title={title}
                     subtitle={subtitle}
                     imageSrc={imageSrc}
+                    buttonText={buttonText}
+                    buttonOnclick={buttonOnclick}
                   />
                 </div>
               );
