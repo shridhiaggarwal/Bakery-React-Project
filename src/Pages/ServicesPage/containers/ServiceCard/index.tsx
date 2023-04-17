@@ -7,8 +7,10 @@ export interface IServiceCardProps {
   title: string;
   subtitle: string;
   imageSrc: string;
-  buttonText: string;
-  buttonOnclick: () => void;
+  button?: {
+    text: string;
+    onClick: () => void;
+  }
 }
 
 const StyledServiceCard = styled.div`
@@ -50,10 +52,10 @@ const StyledServiceImage = styled.img`
 `;
 
 function ServiceCard(props: IServiceCardProps) {
-  const { title, subtitle, imageSrc, buttonText, buttonOnclick } = props;
+  const { title, subtitle, imageSrc, button } = props;
 
   const handleButtonClick = () => {
-    buttonOnclick();
+    button && button.onClick();
   };
 
   return (
@@ -74,7 +76,7 @@ function ServiceCard(props: IServiceCardProps) {
         textAlign="center"
         textBoxWidth="100%"
       />
-      <Button onButtonClick={handleButtonClick}>{buttonText}</Button>
+      {button && <Button onButtonClick={handleButtonClick}>{button.text}</Button>}
     </StyledServiceCard>
   );
 }

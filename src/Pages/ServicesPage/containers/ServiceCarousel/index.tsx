@@ -48,15 +48,14 @@ function ServiceCarousel(props: IServiceCarouselProps) {
             }}
           >
             {servicesData.map((service) => {
-              const { title, subtitle, imageSrc, buttonText, buttonOnclick } = service;
+              const { title, subtitle, imageSrc, button } = service;
               return (
                 <div className="owl-item">
                   <ServiceCard
                     title={title}
                     subtitle={subtitle}
                     imageSrc={imageSrc}
-                    buttonText={buttonText}
-                    buttonOnclick={buttonOnclick}
+                    button={button}
                   />
                 </div>
               );

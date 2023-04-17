@@ -5,6 +5,10 @@ import Typography from "../../../../components/Typography";
 import Images from "../../../../components/Images";
 import { useNavigate } from "react-router";
 
+interface IServiceBoxProps{
+  showButton?: boolean;
+}
+
 const StyledServiceBox = styled.div`
   display: flex;
   align-items: center;
@@ -24,7 +28,8 @@ const StyledImageBox = styled(ImageBox)`
   }
 `;
 
-function ServiceBox() {
+function ServiceBox(props: IServiceBoxProps) {
+  const {showButton} = props;
   const navigate = useNavigate();
 
   const handleServiceButton = () => {
@@ -55,10 +60,10 @@ function ServiceBox() {
             "Our services don't just stop at baking. We also offer catering for events and gatherings, with options to fit any budget and dietary restrictions. From savory sandwiches to sweet treats, we can provide everything you need to make your event a success.",
           variant: "body1",
         }}
-        button={{
+        button={ showButton ? {
           text: "Read more",
           onClick: handleServiceButton
-        }}
+        } : undefined}
       />
       <StyledImageBox imageSrc={Images.CAKE_ELEMENT2} margin="0 0 0 80px" />
     </StyledServiceBox>
