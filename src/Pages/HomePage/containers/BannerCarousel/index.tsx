@@ -1,8 +1,23 @@
 import "./bannerCarousel.css";
 import Button from "../../../../components/Button";
-import Images from "../../../../components/Images"
+import Images from "../../../../components/Images";
+import { useNavigate } from "react-router";
 
 function BannerCarousel() {
+  const navigate = useNavigate();
+
+  const handleServiceButton = () => {
+    navigate("/services");
+  };
+
+  const handleMenuButton = () => {
+    navigate("/menu");
+  };
+
+  const handleContactButton = () => {
+    navigate("/contact");
+  };
+
   return (
     <section className="bannerCarousel">
       <div
@@ -28,7 +43,7 @@ function BannerCarousel() {
               <p>
                 We bake with love and passion to bring you the best flavors.
               </p>
-              <Button>Our menu</Button>
+              <Button onButtonClick={handleMenuButton}>Our menu</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -39,7 +54,7 @@ function BannerCarousel() {
                 We offer catering services for any kind of event! Contact us to
                 make an order
               </p>
-              <Button>Our services</Button>
+              <Button onButtonClick={handleServiceButton}>Our services</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -49,7 +64,7 @@ function BannerCarousel() {
               <p>
                 Satisfy your sweet cravings with our delectable bakery delights.
               </p>
-              <Button>Contact us</Button>
+              <Button onButtonClick={handleContactButton}>Contact us</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -60,7 +75,7 @@ function BannerCarousel() {
                 Get a taste of heaven with our handcrafted pastries and
                 desserts.
               </p>
-              <Button>Our menu</Button>
+              <Button onButtonClick={handleMenuButton}>Our menu</Button>
             </div>
           </div>
           <div className="carousel-item">
@@ -68,7 +83,7 @@ function BannerCarousel() {
             <div className="carousel-caption">
               <h3>We love Cupcakes</h3>
               <p>Join us for a cup of coffee and a bite of heaven.</p>
-              <Button>Contact us</Button>
+              <Button onButtonClick={handleContactButton}>Contact us</Button>
             </div>
           </div>
         </div>

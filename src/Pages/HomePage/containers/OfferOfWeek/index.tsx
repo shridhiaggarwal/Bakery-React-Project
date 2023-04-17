@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ImageBox from "../../../../components/ImageBox";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
 import Images from "../../../../components/Images";
+import { useNavigate } from "react-router";
 
 const OfferOfWeekSection = styled.section`
   height: 360px;
@@ -35,6 +36,12 @@ const StyledImageBox = styled(ImageBox)`
 `;
 
 function OfferOfWeek() {
+  const navigate = useNavigate();
+
+  const handleMenuButton = () => {
+    navigate("/menu");
+  };
+
   return (
     <>
       <OfferOfWeekSection>
@@ -51,7 +58,10 @@ function OfferOfWeek() {
               "Treat yourself with our delicious offer of the week - buy any dessert and get a scoop of ice cream for free.",
             variant: "body1",
           }}
-          buttonText="Check our menu"
+          button={{
+            text: "Check our menu",
+            onClick: handleMenuButton
+          }}
           textAlign="center"
         />
         <StyledImageBox

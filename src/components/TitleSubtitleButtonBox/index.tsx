@@ -17,7 +17,10 @@ interface ITypographyProps {
 interface ITitleSubtitleButtonBoxProps {
   title?: ITypographyProps;
   subtitle?: ITypographyProps;
-  buttonText?: string;
+  button?: {
+    text: string;
+    onClick: ()=> void;
+  }
   textAlign?: string;
   textBoxWidth?: string;
   customTitle?: React.ReactNode;
@@ -38,7 +41,7 @@ const PreLineWrapper = styled(Typography)<{
 `;
 
 function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
-  const { title, subtitle, buttonText, textAlign, textBoxWidth, customTitle } =
+  const { title, subtitle, button, textAlign, textBoxWidth, customTitle } =
     props;
 
   const titleProps = {
@@ -74,7 +77,7 @@ function TitleSubtitleButtonBox(props: ITitleSubtitleButtonBoxProps) {
           {subtitle.value}
         </PreLineWrapper>
       )}
-      {buttonText && <Button>{buttonText}</Button>}
+      {button && <Button onButtonClick={button.onClick}>{button.text}</Button>}
     </TextBox>
   );
 }

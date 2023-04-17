@@ -3,6 +3,7 @@ import styled from "styled-components";
 import TitleSubtitleButtonBox from "../../components/TitleSubtitleButtonBox";
 import ImageBox from "../../components/ImageBox";
 import Images from "../../components/Images"
+import { useNavigate } from "react-router";
 
 const CustomOrderSection = styled.section`
   background-color: #faf6f2;
@@ -28,6 +29,12 @@ const StyledImageBox = styled(ImageBox)`
 `;
 
 function CustomOrder() {
+  const navigate = useNavigate();
+
+  const handleContactButton = () => {
+    navigate("/contact");
+  };
+
   return (
     <CustomOrderSection>
       <StyledImageBox
@@ -47,7 +54,10 @@ function CustomOrder() {
             "At our bakery, we understand that everyone has unique tastes and preferences. That's why we offer a custom order service that allows you to create a dessert that's uniquely yours. Whether it's a specific flavor or a particular design, we'll work with you to create something truly special.",
           variant: "body1",
         }}
-        buttonText="Contact us"
+        button={{
+          text: "Contact us",
+          onClick: handleContactButton
+        }}
         textBoxWidth="100%"
       />
     </CustomOrderSection>

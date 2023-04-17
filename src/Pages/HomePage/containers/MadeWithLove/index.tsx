@@ -3,6 +3,7 @@ import styled from "styled-components";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
 import ImageBox from "../../../../components/ImageBox";
 import Images from "../../../../components/Images";
+import { useNavigate } from "react-router";
 
 const MadeWithLoveSection = styled.section`
   display: flex;
@@ -27,10 +28,19 @@ const StyledImageBox = styled(ImageBox)`
 `;
 
 function MadeWithLove() {
+  const navigate = useNavigate();
+
+  const handleAboutButton = () => {
+    navigate("/about");
+  };
+
   return (
     <>
       <MadeWithLoveSection>
-        <StyledImageBox imageSrc={Images.CUPCAKE_ELEMENT2} margin={"0 80px 0 0"} />
+        <StyledImageBox
+          imageSrc={Images.CUPCAKE_ELEMENT2}
+          margin={"0 80px 0 0"}
+        />
         <TitleSubtitleButtonBox
           title={{
             value: "Made with love",
@@ -43,7 +53,10 @@ function MadeWithLove() {
               "At Bakery, we believe that the secret ingredient to our baked goods is love. That's why we put our heart and soul into every item we make, from the freshest ingredients to the final touches of decoration. We hope you can taste the love we put into each and every bite.",
             variant: "body1",
           }}
-          buttonText="Read more"
+          button={{
+            text: "Read more",
+            onClick: handleAboutButton,
+          }}
         />
       </MadeWithLoveSection>
     </>

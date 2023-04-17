@@ -3,6 +3,7 @@ import styled from "styled-components";
 import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
 import ImageBox from "../../../../components/ImageBox";
 import Images from "../../../../components/Images"
+import { useNavigate } from "react-router";
 
 const CompleteMenuSection = styled.section`
   height: 360px;
@@ -28,6 +29,12 @@ const StyledImageBox = styled(ImageBox)`
 `;
 
 function CompleteMenuBox() {
+  const navigate = useNavigate();
+
+  const handleMenuButton = () => {
+    navigate("/menu");
+  };
+
   return (
     <CompleteMenuSection>
       <TitleSubtitleButtonBox
@@ -42,7 +49,10 @@ function CompleteMenuBox() {
             "If you thought that was good, wait until you see what else we have to offer! Head to our menu section for a complete list of desserts that will leave you wanting more.",
           variant: "body1",
         }}
-        buttonText="Explore complete menu"
+        button={{
+          text: "Explore complete menu",
+          onClick: handleMenuButton
+        }}
       />
       <StyledImageBox
         backgroundImageSrc={Images.BACKGROUND1}
