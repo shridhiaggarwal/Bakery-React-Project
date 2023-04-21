@@ -6,6 +6,8 @@ import cakeElement1 from "../../images/elements/cake_element.png";
 import cakeElement2 from "../../images/elements/cake_element2.png";
 import cakeElement3 from "../../images/elements/cake_element3.png";
 import cakeElement4 from "../../images/elements/cake_element4.png";
+import cakeElement5 from "../../images/elements/cake_element5.png";
+import cakeElement6 from "../../images/elements/cake_element6.png";
 import cupcakeElement1 from "../../images/elements/cupcake_element.png";
 import cupcakeElement2 from "../../images/elements/cupcake_element2.png";
 import donutElement1 from "../../images/elements/donut_element.png";
@@ -38,6 +40,8 @@ const Images = {
   CAKE_ELEMENT2: cakeElement2,
   CAKE_ELEMENT3: cakeElement3,
   CAKE_ELEMENT4: cakeElement4,
+  CAKE_ELEMENT5: cakeElement5,
+  CAKE_ELEMENT6: cakeElement6,
   CUPCAKE_ELEMENT1: cupcakeElement1,
   CUPCAKE_ELEMENT2: cupcakeElement2,
   DONUT_ELEMENT1: donutElement1,
