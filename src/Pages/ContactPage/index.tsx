@@ -1,10 +1,14 @@
-import React from "react";
 import styled from "styled-components";
 import Typography from "../../components/Typography";
-import Images from "../../components/Images";
-import TitleSubtitleButtonBox from "../../components/TitleSubtitleButtonBox";
+import ContactForm from "./containers/ContactForm";
+import MapComponent from "../../components/MapComponent";
 
 interface IContactPageProps {}
+
+interface IContactInfoItemProps {
+  iconClassName: string;
+  value: string;
+}
 
 const ContactSection = styled.section`
   padding: 80px;
@@ -14,10 +18,15 @@ const ContactSection = styled.section`
   }
 `;
 
+const ContactInfoBox = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
 const ContactInfo = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
 `;
 
 const ContactInfoIcon = styled.i`
@@ -25,9 +34,20 @@ const ContactInfoIcon = styled.i`
   margin-right: 8px;
 `;
 
-const ContactInfoText = styled.p`
-  margin-right: 16px;
-`;
+function ContactInfoItem(props: IContactInfoItemProps) {
+  const { iconClassName, value } = props;
+  return (
+    <ContactInfo>
+      <ContactInfoIcon
+        className={iconClassName}
+        aria-hidden="true"
+      ></ContactInfoIcon>
+      <Typography variant="body1" fontWeight="bold" margin="0 16px 0 0">
+        {value}
+      </Typography>
+    </ContactInfo>
+  );
+}
 
 function ContactPage(props: IContactPageProps) {
   return (
@@ -43,67 +63,33 @@ function ContactPage(props: IContactPageProps) {
       <Typography variant="body1" margin="0 0 1rem 0" textAlign="center">
         We'd love to hear from you! Contact us with any questions or comments.
       </Typography>
-      <ContactInfo>
-        <ContactInfoIcon
-          className="fa fa-map-marker"
-          aria-hidden="true"
-        ></ContactInfoIcon>
-        <ContactInfoText>Block B, Kamla Nagar, Delhi, India</ContactInfoText>
-        <ContactInfoIcon
-          className="fa fa-phone"
-          aria-hidden="true"
-        ></ContactInfoIcon>
-        <ContactInfoText>+91 9876543210</ContactInfoText>
-        <ContactInfoIcon
-          className="fa fa-clock-o"
-          aria-hidden="true"
-        ></ContactInfoIcon>
-        <ContactInfoText>Mon-Sat: 9 A.M. - 5 P.M.</ContactInfoText>
-      </ContactInfo>
-      <div className="contact-form">
-        <div className="container">
-          <form role="form">
-            <div className="row">
-              <div className="col-md-4">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  placeholder="Name"
-                />
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  placeholder="Email"
-                />
-                <input
-                  type="text"
-                  className="form-control"
-                  id="Subject"
-                  placeholder="Subject"
-                />
-              </div>
-              <div className="col-md-8">
-                {/* <textarea
-                  className="form-control"
-                  id="message"
-                  placeholder="Message"
-                >
-                  {" "}
-                  Message...
-                </textarea> */}
-                <center>
-                  <button type="button" className="form_submit submit-btn">
-                    {" "}
-                    SEND
-                  </button>
-                </center>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+      <ContactInfoBox>
+        <ContactInfoItem
+          iconClassName="fa fa-map-marker"
+          value="Block B, Kamla Nagar, Delhi, India"
+        />
+        <ContactInfoItem iconClassName="fa fa-phone" value="+91 9876543210" />
+        <ContactInfoItem
+          iconClassName="fa fa-clock-o"
+          value="Mon-Sat: 9 A.M. - 5 P.M."
+        />
+      </ContactInfoBox>
+      <ContactForm margin="20px 0 0 0" />
+      <MapComponent
+        location={{
+          id: "bakery",
+          position: [28.680911, 77.204587],
+          name: "Bakery!",
+        }}
+        zoom={16}
+        zoomControl={true}
+        scrollWheelZoom={true}
+        width="100%"
+        height="400px"
+        margin="48px 0 0 0"
+        border="2px dotted #da5162"
+        borderRadius="8px"
+      />
     </ContactSection>
   );
 }

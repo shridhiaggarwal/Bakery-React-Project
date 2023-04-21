@@ -3,9 +3,12 @@ import styled from "styled-components";
 interface IButtonProps {
   children: string;
   onButtonClick: () => void;
+  marginTop?: string;
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<{
+  marginTop?: string;
+}>`
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   padding: 8px 24px;
@@ -13,7 +16,7 @@ const StyledButton = styled.button`
   color: white;
   border: 2px solid #da5162;
   border-radius: 8px;
-  margin-top: 2.5rem;
+  margin-top: ${props => props.marginTop ? props.marginTop : "2.5rem"};
   text-transform: uppercase;
   &:hover,
   &:active {
@@ -27,13 +30,13 @@ const StyledButton = styled.button`
 `;
 
 function Button(props: IButtonProps) {
-  const { children, onButtonClick } = props;
+  const { children, onButtonClick, marginTop } = props;
 
   const handleClick = () => {
     onButtonClick();
   };
 
-  return <StyledButton onClick={handleClick}>{children}</StyledButton>;
+  return <StyledButton onClick={handleClick} marginTop={marginTop}>{children}</StyledButton>;
 }
 
 export default Button;
