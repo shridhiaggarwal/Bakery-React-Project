@@ -8,7 +8,6 @@ interface ILocationProps {
   name: string;
   picture?: string;
   description?: string;
-  seeMoreLink?: string;
 }
 
 interface IMapComponentProps {
