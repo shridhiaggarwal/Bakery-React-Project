@@ -40,6 +40,10 @@ import gallery6 from "../../images/gallery/gallery6.jpg";
 import gallery7 from "../../images/gallery/gallery7.jpg";
 import gallery8 from "../../images/gallery/gallery8.jpg";
 import gallery9 from "../../images/gallery/gallery9.jpg";
+import team1 from "../../images/about/baker1.jpg"
+import team2 from "../../images/about/baker2.jpg"
+import team3 from "../../images/about/baker3.jpg"
+import team4 from "../../images/about/baker4.jpg"
 
 const Images = {
   PINK_LOGO: pinkLogo,
@@ -83,8 +87,11 @@ const Images = {
   GALLERY6: gallery6,
   GALLERY7: gallery7,
   GALLERY8: gallery8,
-  GALLERY9: gallery9
-
+  GALLERY9: gallery9,
+  TEAM1: team1,
+  TEAM2: team2,
+  TEAM3: team3,
+  TEAM4: team4,
 };
 
 export default Images;

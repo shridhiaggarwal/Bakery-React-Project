@@ -33,11 +33,7 @@ function ServiceCarousel(props: IServiceCarouselProps) {
 
   return (
     <div className="container serviceCarousel">
-      <OwlCarousel
-        className="owl-carousel owl-theme owl-loaded"
-        {...options}
-        id="owl-services"
-      >
+      <OwlCarousel className="owl-carousel owl-theme owl-loaded" {...options}>
         <div className="owl-stage-outer">
           <div
             className="owl-stage"
