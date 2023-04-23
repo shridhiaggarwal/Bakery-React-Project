@@ -1,6 +1,5 @@
 import React from "react";
 import IconButton from "../IconButton";
-import styled from "styled-components";
 
 interface IModalProps {
   modalId: string;
@@ -26,7 +25,7 @@ function Modal(props: IModalProps) {
             <IconButton
               data-dismiss="modal"
               onButtonClick={onClose}
-              marginTop="8px"
+              margin="16px 16px 0px auto"
             >
               <i className="fa fa-times" aria-hidden="true"></i>
             </IconButton>

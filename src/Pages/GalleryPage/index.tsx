@@ -1,24 +1,55 @@
 import React from "react";
 import Images from "../../components/Images";
 import Modal from "../../components/Modal";
-import Button from "../../components/Button";
 import styled from "styled-components";
+import Typography from "../../components/Typography";
+import GalleryImagesGrid, { IImageProps } from "./containers/GalleryImagesGrid";
 
 const imagesArray = [
   {
     id: 1,
-    url: Images.SERVICE1,
-    description: "Description for Image 1",
+    url: Images.GALLERY1,
+    caption: "Sweet and delicious, just like you.",
   },
   {
     id: 2,
-    url: Images.SERVICE1,
-    description: "Description for Image 2",
+    url: Images.GALLERY2,
+    caption: "Indulge yourself with our mouthwatering treats.",
   },
   {
     id: 3,
-    url: Images.SERVICE1,
-    description: "Description for Image 3",
+    url: Images.GALLERY3,
+    caption: "Happiness is a warm pastry.",
+  },
+  {
+    id: 4,
+    url: Images.GALLERY4,
+    caption: "Baking is love made visible.",
+  },
+  {
+    id: 5,
+    url: Images.GALLERY5,
+    caption: "Happy birthday to the sweetest person we know!",
+  },
+  {
+    id: 6,
+    url: Images.GALLERY6,
+    caption: "Treat yourself, you deserve it.",
+  },
+  {
+    id: 7,
+    url: Images.GALLERY7,
+    caption: "Sweeten up your day with our treats.",
+  },
+  {
+    id: 8,
+    url: Images.GALLERY8,
+    caption: "Sometimes, all you need is a cupcake.",
+  },
+  {
+    id: 9,
+    url: Images.GALLERY9,
+    caption: "Age is just a number. Cake is eternal.",
   },
 ];
 
@@ -30,53 +61,86 @@ const GallerySection = styled.section`
   }
 `;
 
-function ModalContent(props: any) {
-  return <></>;
+const ModalImage = styled.img`
+  max-height: 400px;
+  width: 100%;
+`;
+
+const Caption = styled(Typography)`
+  display: block;
+  width: 100%;
+`;
+
+interface IModalContentProps {
+  selectedImage: IImageProps;
+}
+
+function ModalContent(props: IModalContentProps) {
+  const { selectedImage } = props;
+
+  return (
+    <>
+      <ModalImage src={selectedImage.url} alt={selectedImage.caption} />
+      <Caption
+        variant="caption"
+        fontWeight="bold"
+        padding="16px 0 0 0"
+        textAlign="center"
+      >
+        {selectedImage.caption}
+      </Caption>
+    </>
+  );
 }
 
 function GalleryPage() {
   const [modalOpen, setModalOpen] = React.useState<boolean>(false);
-  const [selectedImage, setSelectedImage] = React.useState<number | null>(null);
+  const [selectedImage, setSelectedImage] = React.useState<IImageProps | null>(null);
 
-  const handleImageClick = (imageId: number) => {
+  const handleImageClick = (image: IImageProps) => {
     setModalOpen(true);
-    setSelectedImage(imageId);
+    setSelectedImage(image);
   };
 
   const handleModalClose = () => {
     setModalOpen(false);
     setSelectedImage(null);
+    const bodyElement = document.getElementsByTagName("body")[0];
+    const navElement = document.getElementsByTagName("nav")[0];
+    if (navElement) {
+      bodyElement.classList.remove("modal-open");
+      bodyElement.style.paddingRight = "0px";
+      navElement.style.paddingRight = "16px";
+    }
   };
 
   return (
     <GallerySection>
-      <div className="container-fluid">
-        <div className="row">
-          {imagesArray.map((image) => {
-            return (
-              <img
-                key={image.id}
-                src={image.url}
-                alt={image.description}
-                onClick={() => handleImageClick(image.id)}
-                data-toggle="modal"
-                data-target="#galleryModal"
-                data-backdrop="false"
-              />
-            );
-          })}
-        </div>
-        {modalOpen && (
-          <>
-            <Modal
-              modalId="galleryModal"
-              modalContent={<>hello</>}
-              onClose={handleModalClose}
-              showBackdrop={true}
-            />
-          </>
-        )}
-      </div>
+      <Typography
+        variant="h4"
+        color="#da5162"
+        margin="0 0 4rem 0"
+        textAlign="center"
+      >
+        Our Gallery
+      </Typography>
+      <GalleryImagesGrid
+        imagesArray={imagesArray}
+        onImageClick={handleImageClick}
+        dataToggle="modal"
+        dataTarget="#galleryModal"
+        dataBackdrop={false}
+      />
+      {modalOpen && selectedImage && (
+        <>
+          <Modal
+            modalId="galleryModal"
+            modalContent={<ModalContent selectedImage={selectedImage} />}
+            onClose={handleModalClose}
+            showBackdrop={true}
+          />
+        </>
+      )}
     </GallerySection>
   );
 }

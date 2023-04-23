@@ -4,13 +4,12 @@ import styled from "styled-components";
 interface IIconButtonProps {
   children: any;
   onButtonClick?: () => void;
-  marginTop?: string;
-  marginLeft?: string;
+  margin?: string;
+  className?: string;
 }
 
 const StyledButton = styled.button<{
-  marginTop?: string;
-  marginLeft?: string;
+  margin?: string;
 }>`
   width: 32px;
   height: 32px;
@@ -22,8 +21,7 @@ const StyledButton = styled.button<{
   color: white;
   border: 2px solid #da5162;
   border-radius: 4px;
-  margin-top: ${(props) => props.marginTop};
-  margin-left: ${(props) => props.marginLeft};
+  margin: ${(props) => props.margin};
   &:hover,
   &:active {
     background-color: transparent;
@@ -36,18 +34,14 @@ const StyledButton = styled.button<{
 `;
 
 function IconButton(props: IIconButtonProps) {
-  const { children, onButtonClick, marginTop, marginLeft } = props;
+  const { children, onButtonClick, margin, className } = props;
 
   const handleClick = () => {
     onButtonClick && onButtonClick();
   };
 
   return (
-    <StyledButton
-      onClick={handleClick}
-      marginTop={marginTop}
-      marginLeft={marginLeft}
-    >
+    <StyledButton type="button" onClick={handleClick} margin={margin} className={className}>
       {children}
     </StyledButton>
   );
