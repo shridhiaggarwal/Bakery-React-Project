@@ -36,7 +36,7 @@ function Button(props: IButtonProps) {
     onButtonClick();
   };
 
-  return <StyledButton onClick={handleClick} marginTop={marginTop}>{children}</StyledButton>;
+  return <StyledButton  type="button" onClick={handleClick} marginTop={marginTop}>{children}</StyledButton>;
 }
 
 export default Button;

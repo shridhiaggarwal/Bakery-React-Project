@@ -30,6 +30,15 @@ import slider2 from "../../images/slider/slider2.png";
 import slider3 from "../../images/slider/slider3.png";
 import slider4 from "../../images/slider/slider4.jpg";
 import slider5 from "../../images/slider/slider5.jpg";
+import gallery1 from "../../images/gallery/gallery1.jpg";
+import gallery2 from "../../images/gallery/gallery2.jpg";
+import gallery3 from "../../images/gallery/gallery3.jpg";
+import gallery4 from "../../images/gallery/gallery4.jpg";
+import gallery5 from "../../images/gallery/gallery5.jpg";
+import gallery6 from "../../images/gallery/gallery6.jpg";
+import gallery7 from "../../images/gallery/gallery7.jpg";
+import gallery8 from "../../images/gallery/gallery8.jpg";
+import gallery9 from "../../images/gallery/gallery9.jpg";
 
 const Images = {
   PINK_LOGO: pinkLogo,
@@ -64,6 +73,16 @@ const Images = {
   SLIDER3: slider3,
   SLIDER4: slider4,
   SLIDER5: slider5,
+  GALLERY1: gallery1,
+  GALLERY2: gallery2,
+  GALLERY3: gallery3,
+  GALLERY4: gallery4,
+  GALLERY5: gallery5,
+  GALLERY6: gallery6,
+  GALLERY7: gallery7,
+  GALLERY8: gallery8,
+  GALLERY9: gallery9
+
 };
 
 export default Images;
