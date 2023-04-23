@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "../../components/Typography";
 import styled from "styled-components";
 import AboutBox from "./containers/AboutBox";
+import CounterCardsContainer from "./containers/CountCardsContainer";
 
 const AboutSection = styled.section`
   padding: 80px;
@@ -22,6 +23,7 @@ function AboutPage() {
         About us
       </Typography>
       <AboutBox />
+      <CounterCardsContainer />
     </AboutSection>
   );
 }

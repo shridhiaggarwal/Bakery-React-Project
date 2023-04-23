@@ -3,7 +3,13 @@ import styled from "styled-components";
 import ImageBox from "../../../../components/ImageBox";
 import Images from "../../../../components/Images";
 import Typography from "../../../../components/Typography";
-import TitleSubtitleButtonBox from "../../../../components/TitleSubtitleButtonBox";
+
+interface IMiniAboutBoxProps {
+  title: string;
+  subtitle: string;
+  iconClass?: string;
+  imageSrc?: string;
+}
 
 const StyledAboutBox = styled.div`
   display: flex;
@@ -31,7 +37,7 @@ const StyledImageBox = styled(ImageBox)`
 const StyledMiniAboutBox = styled.div`
   display: flex;
   align-items: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 `;
 
 const StyledIcon = styled.i`
@@ -43,11 +49,17 @@ const StyledIcon = styled.i`
   font-size: 24px;
 `;
 
-function MiniAboutBox(props: any) {
-  const { title, subtitle, iconClass } = props;
+const StyledImage = styled.img`
+  margin-top: 8px;
+  margin-right: 24px;
+`;
+
+function MiniAboutBox(props: IMiniAboutBoxProps) {
+  const { title, subtitle, iconClass, imageSrc } = props;
   return (
     <StyledMiniAboutBox>
-      <StyledIcon className={iconClass}></StyledIcon>
+      {iconClass && <StyledIcon className={iconClass}></StyledIcon>}
+      {imageSrc && <StyledImage src={imageSrc} />}
       <div>
         <Typography
           variant="h6"
@@ -71,17 +83,20 @@ function AboutBox() {
         <MiniAboutBox
           title="Our Mission"
           subtitle="We are dedicated to constantly improving and innovating our baked goods to ensure our customers always have something new and exciting to try."
-          iconClass={"fa fa-bullseye"}
+          //   iconClass={"fa fa-bullseye"}
+          imageSrc="https://img.icons8.com/office/56/null/goal--v1.png"
         />
         <MiniAboutBox
           title="Our Vision"
           subtitle="Our vision is to bring joy to our customers' lives through our delicious treats, making every day feel like a celebration."
-          iconClass={"fa fa-birthday-cake"}
+          //   iconClass={"fa fa-birthday-cake"}
+          imageSrc="https://img.icons8.com/dusk/56/null/cake.png"
         />
         <MiniAboutBox
           title="What We do"
           subtitle="We specialize in creating delicious and beautiful baked goods that are perfect for any occasion."
-          iconClass={"fa fa-briefcase"}
+          //   iconClass={"fa fa-briefcase"}
+          imageSrc="https://img.icons8.com/office/56/null/briefcase.png"
         />
       </StyledContentBox>
     </StyledAboutBox>
