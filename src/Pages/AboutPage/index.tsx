@@ -8,6 +8,7 @@ import TestimonialContainer from "./containers/TestimonialContainer";
 
 const AboutSection = styled.section`
   padding: 80px;
+  position: relative;
   @media only screen and (max-width: 992px) {
     padding: 40px 20px;
   }

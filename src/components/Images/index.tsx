@@ -48,6 +48,7 @@ import testimonial1 from "../../images/about/Testimonial1.jpg";
 import testimonial2 from "../../images/about/Testimonial2.jpg";
 import testimonial3 from "../../images/about/Testimonial3.jpg";
 import testimonial4 from "../../images/about/Testimonial4.jpg";
+import quoteMark from "../../images/about/quote_mark.png";
 
 const Images = {
   PINK_LOGO: pinkLogo,
@@ -99,7 +100,8 @@ const Images = {
   TESTMONIAL1: testimonial1,
   TESTMONIAL2: testimonial2,
   TESTMONIAL3: testimonial3,
-  TESTMONIAL4: testimonial4
+  TESTMONIAL4: testimonial4,
+  QUOTE_MARK: quoteMark,
 };
 
 export default Images;
