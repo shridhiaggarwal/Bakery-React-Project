@@ -4,14 +4,16 @@ import ImageBox from "../../../../components/ImageBox";
 import Images from "../../../../components/Images";
 import Typography from "../../../../components/Typography";
 
-interface IAboutBoxProps {
-  margin?: string;
-}
 interface IMiniAboutBoxProps {
   title: string;
   subtitle: string;
   iconClass?: string;
   imageSrc?: string;
+}
+
+interface IAboutBoxProps {
+  margin?: string;
+  aboutPageData: Array<IMiniAboutBoxProps>;
 }
 
 const StyledAboutBox = styled.div<{
@@ -81,30 +83,22 @@ function MiniAboutBox(props: IMiniAboutBoxProps) {
 }
 
 function AboutBox(props: IAboutBoxProps) {
-  const { margin } = props;
+  const { margin, aboutPageData } = props;
 
   return (
     <StyledAboutBox margin={margin}>
       <StyledImageBox imageSrc={Images.CAKE_ELEMENT7} margin="0 80px 0 0" />
       <StyledContentBox>
-        <MiniAboutBox
-          title="Our Mission"
-          subtitle="We are dedicated to constantly improving and innovating our baked goods to ensure our customers always have something new and exciting to try."
-          //   iconClass={"fa fa-bullseye"}
-          imageSrc="https://img.icons8.com/office/56/null/goal--v1.png"
-        />
-        <MiniAboutBox
-          title="Our Vision"
-          subtitle="Our vision is to bring joy to our customers' lives through our delicious treats, making every day feel like a celebration."
-          //   iconClass={"fa fa-birthday-cake"}
-          imageSrc="https://img.icons8.com/dusk/56/null/cake.png"
-        />
-        <MiniAboutBox
-          title="What We do"
-          subtitle="We specialize in creating delicious and beautiful baked goods that are perfect for any occasion."
-          //   iconClass={"fa fa-briefcase"}
-          imageSrc="https://img.icons8.com/office/56/null/briefcase.png"
-        />
+        {aboutPageData.map((data) => {
+          return (
+            <MiniAboutBox
+              title={data.title}
+              subtitle={data.subtitle}
+              iconClass={data.iconClass}
+              imageSrc={data.imageSrc}
+            />
+          );
+        })}
       </StyledContentBox>
     </StyledAboutBox>
   );

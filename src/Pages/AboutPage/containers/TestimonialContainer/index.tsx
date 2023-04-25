@@ -7,8 +7,16 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
+interface ITestimonialDataProps {
+  name: string;
+  testimonial: string;
+  imageSrc: string;
+  rating: number;
+}
+
 interface ITestimonialContainerProps {
   margin?: string;
+  testimonialData: Array<ITestimonialDataProps>;
 }
 
 const StyledTestimonialContainer = styled.div<{
@@ -41,38 +49,7 @@ const StyledTestimonialCarousel = styled.div`
 `;
 
 function TestimonialContainer(props: ITestimonialContainerProps) {
-  const { margin } = props;
-
-  const testimonialData = [
-    {
-      name: "Satoshi Suzuki",
-      testimonial:
-        "I am blown away by the quality and taste of the cakes from this bakery. Every bite was a heavenly experience.",
-      imageSrc: Images.TESTMONIAL1,
-      rating: 4,
-    },
-    {
-      name: "Rhea Mehra",
-      testimonial:
-        "I couldn't get enough of the delicious cupcakes from this bakery. They were the perfect addition to my daughter's birthday party.",
-      imageSrc: Images.TESTMONIAL2,
-      rating: 4.5,
-    },
-    {
-      name: "Ayumi Ishida",
-      testimonial:
-        "I ordered a custom cake for my sister's wedding and it was absolutely stunning. The attention to detail was impeccable and it tasted even better than it looked.",
-      imageSrc: Images.TESTMONIAL3,
-      rating: 5,
-    },
-    {
-      name: "William Anderson",
-      testimonial:
-        "I was hesitant to order online, but the quick delivery and amazing taste of the baked goods from this bakery exceeded all of my expectations. I will definitely be a repeat customer!",
-      imageSrc: Images.TESTMONIAL4,
-      rating: 4,
-    },
-  ];
+  const { margin, testimonialData } = props;
 
   const options = {
     items: 2,
@@ -93,7 +70,6 @@ function TestimonialContainer(props: ITestimonialContainerProps) {
       <Typography variant="h4" color="#da5162" margin="0 0 32px 0">
         Sweet Success Stories
       </Typography>
-
       <StyledTestimonialCarousel>
         <OwlCarousel className="owl-carousel owl-theme owl-loaded" {...options}>
           {testimonialData.map((data) => {
@@ -110,21 +86,6 @@ function TestimonialContainer(props: ITestimonialContainerProps) {
           })}
         </OwlCarousel>
       </StyledTestimonialCarousel>
-{/* 
-      <div className="row">
-        {testimonialData.map((data) => {
-          return (
-            <div className="col-md-6">
-              <TestimonialCard
-                name={data.name}
-                testimonial={data.testimonial}
-                imageSrc={data.imageSrc}
-                rating={data.rating}
-              />
-            </div>
-          );
-        })}
-      </div> */}
     </StyledTestimonialContainer>
   );
 }

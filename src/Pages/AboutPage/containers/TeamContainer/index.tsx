@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import TeamMemberCard from "../TeamMemberCard";
-import Images from "../../../../components/Images";
 import Typography from "../../../../components/Typography";
 
+interface ITeamsDataProps{
+  name: string;
+  designation: string;
+  imageSrc: string;
+}
 interface ITeamContainerProps {
   margin?: string;
+  teamsData: Array<ITeamsDataProps>;
 }
 
 const StyledTeamContainer = styled.div<{
@@ -15,18 +20,7 @@ const StyledTeamContainer = styled.div<{
 `;
 
 function TeamContainer(props: ITeamContainerProps) {
-  const { margin } = props;
-
-  const teamData = [
-    { name: "Ishita Kapoor", designation: "Owner", imageSrc: Images.TEAM1 },
-    {
-      name: "Takashi Tanaka",
-      designation: "Head Chef",
-      imageSrc: Images.TEAM2,
-    },
-    { name: "Emily Thompson", designation: "Baker", imageSrc: Images.TEAM3 },
-    { name: "Rohit Singh", designation: "Baker", imageSrc: Images.TEAM4 },
-  ];
+  const { margin, teamsData } = props;
 
   return (
     <StyledTeamContainer margin={margin}>
@@ -34,7 +28,7 @@ function TeamContainer(props: ITeamContainerProps) {
         Our Team
       </Typography>
       <div className="row">
-        {teamData.map((member) => {
+        {teamsData.map((member) => {
           return (
             <div className="col-md-3">
               <TeamMemberCard
