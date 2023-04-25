@@ -13,16 +13,18 @@ const StyledMemberCard = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #faf6f2;
+  // background-color: #faf6f2;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 4px solid transparent;
   border-bottom: 4px solid #da5162;
   border-radius: 8px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.16);
   &:hover {
     border-left: 4px dotted #da5162;
     border-right: 4px dotted #da5162;
     border-top: 4px dotted #da5162;
+    border-bottom: 4px dotted #da5162;
   }
 `;
 
@@ -39,10 +41,10 @@ function TeamMemberCard(props: ITeamMemberCardProps) {
   return (
     <StyledMemberCard>
       <StyledImage src={imageSrc} />
-      <Typography variant="h5" color="#da5162" margin="16px 0 0 0">
+      <Typography variant="h6" color="#da5162" fontWeight="bold" margin="16px 0 0 0">
         {name}
       </Typography>
-      <Typography variant="h6" margin="16px 0 16px 0">
+      <Typography variant="body1" margin="8px 0 16px 0">
         {designation}
       </Typography>
     </StyledMemberCard>
