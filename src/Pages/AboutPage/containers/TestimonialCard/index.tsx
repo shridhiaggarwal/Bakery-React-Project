@@ -57,6 +57,13 @@ const StyledQuoteMark = styled.img`
   opacity: 0.5;
 `;
 
+const StyledWrapTypography = styled(Typography)`
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+`;
+
 function TestimonialCard(props: ITestimonialCardProps) {
   const { name, testimonial, imageSrc, rating } = props;
 
@@ -65,7 +72,7 @@ function TestimonialCard(props: ITestimonialCardProps) {
       <StyledImage src={imageSrc} />
       <TestimonialText>
         <StyledQuoteMark src={Images.QUOTE_MARK} className="quoteMarkClass"/>
-        <Typography variant="body1">{testimonial}</Typography>
+        <StyledWrapTypography variant="body1">{testimonial}</StyledWrapTypography>
         <Typography
           variant="body1"
           color="#da5162"

@@ -106,7 +106,7 @@ function AboutPage() {
     {
       name: "William Anderson",
       testimonial:
-        "I was hesitant to order online, but the quick delivery and amazing taste of the baked goods from this bakery exceeded all of my expectations. I will definitely be a repeat customer!",
+        "I was hesitant to order online, but the quick delivery and amazing taste of the baked goods from this bakery exceeded all of my expectations.",
       imageSrc: Images.TESTMONIAL4,
       rating: 4,
     },

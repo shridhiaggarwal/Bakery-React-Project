@@ -26,7 +26,7 @@ function CounterCardsContainer(props: ICounterCardsContainerProps) {
     <StyledRow className="row" margin={margin}>
       {counterCardsData.map((card) => {
         return (
-          <div className="col-md-3">
+          <div className="col-sm-6 col-md-6 col-lg-3">
             <CounterCard
               imageSrc={card.imageSrc}
               counterStart={card.counterStart}

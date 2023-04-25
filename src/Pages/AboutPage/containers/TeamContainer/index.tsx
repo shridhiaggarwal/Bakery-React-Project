@@ -30,7 +30,7 @@ function TeamContainer(props: ITeamContainerProps) {
       <div className="row">
         {teamsData.map((member) => {
           return (
-            <div className="col-md-3">
+            <div className="col-sm-6 col-md-6 col-lg-3">
               <TeamMemberCard
                 name={member.name}
                 designation={member.designation}

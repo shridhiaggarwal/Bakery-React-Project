@@ -26,6 +26,9 @@ const StyledMemberCard = styled.div`
     border-top: 4px dotted #da5162;
     border-bottom: 4px dotted #da5162;
   }
+  @media (max-width: 768px){
+    margin-bottom: 16px;
+  }
 `;
 
 const StyledImage = styled.img`

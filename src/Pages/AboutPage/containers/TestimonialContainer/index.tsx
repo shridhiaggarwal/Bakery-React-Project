@@ -59,7 +59,7 @@ function TestimonialContainer(props: ITestimonialContainerProps) {
     autoPlay: true,
     responsive: {
       1: { items: 1 },
-      768: { items: 2 },
+      850: { items: 2 },
       992: { items: 2 },
     },
     stagePadding: 8,

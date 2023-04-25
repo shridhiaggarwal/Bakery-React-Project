@@ -20,6 +20,9 @@ const StyledCounterCard = styled.div`
     font-size: 1.75rem;
     font-weight: bolder;
   }
+  @media (max-width: 768px){
+    margin-bottom: 16px;
+  }
 `;
 
 const StyledImage = styled.img`
