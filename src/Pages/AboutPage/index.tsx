@@ -4,6 +4,7 @@ import styled from "styled-components";
 import AboutBox from "./containers/AboutBox";
 import CounterCardsContainer from "./containers/CountCardsContainer";
 import TeamContainer from "./containers/TeamContainer";
+import TestimonialContainer from "./containers/TestimonialContainer";
 
 const AboutSection = styled.section`
   padding: 80px;
@@ -18,14 +19,15 @@ function AboutPage() {
       <Typography
         variant="h4"
         color="#da5162"
-        margin="0 0 4rem 0"
+        margin="0 0 64px 0"
         textAlign="center"
       >
         About us
       </Typography>
-      <AboutBox />
-      <CounterCardsContainer />
-      <TeamContainer />
+      <AboutBox margin="0 0 80px 0" />
+      <CounterCardsContainer margin="0 0 80px 0" />
+      <TeamContainer margin="0 0 80px 0" />
+      <TestimonialContainer />
     </AboutSection>
   );
 }

@@ -8,7 +8,7 @@ import cakeElement3 from "../../images/elements/cake_element3.png";
 import cakeElement4 from "../../images/elements/cake_element4.png";
 import cakeElement5 from "../../images/elements/cake_element5.png";
 import cakeElement6 from "../../images/elements/cake_element6.png";
-import cakeElement7 from "../../images/elements/cake_element7.png"
+import cakeElement7 from "../../images/elements/cake_element7.png";
 import cupcakeElement1 from "../../images/elements/cupcake_element.png";
 import cupcakeElement2 from "../../images/elements/cupcake_element2.png";
 import donutElement1 from "../../images/elements/donut_element.png";
@@ -40,10 +40,14 @@ import gallery6 from "../../images/gallery/gallery6.jpg";
 import gallery7 from "../../images/gallery/gallery7.jpg";
 import gallery8 from "../../images/gallery/gallery8.jpg";
 import gallery9 from "../../images/gallery/gallery9.jpg";
-import team1 from "../../images/about/baker1.jpg"
-import team2 from "../../images/about/baker2.jpg"
-import team3 from "../../images/about/baker3.jpg"
-import team4 from "../../images/about/baker4.jpg"
+import team1 from "../../images/about/baker1.jpg";
+import team2 from "../../images/about/baker2.jpg";
+import team3 from "../../images/about/baker3.jpg";
+import team4 from "../../images/about/baker4.jpg";
+import testimonial1 from "../../images/about/Testimonial1.jpg";
+import testimonial2 from "../../images/about/Testimonial2.jpg";
+import testimonial3 from "../../images/about/Testimonial3.jpg";
+import testimonial4 from "../../images/about/Testimonial4.jpg";
 
 const Images = {
   PINK_LOGO: pinkLogo,
@@ -92,6 +96,10 @@ const Images = {
   TEAM2: team2,
   TEAM3: team3,
   TEAM4: team4,
+  TESTMONIAL1: testimonial1,
+  TESTMONIAL2: testimonial2,
+  TESTMONIAL3: testimonial3,
+  TESTMONIAL4: testimonial4
 };
 
 export default Images;

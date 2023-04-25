@@ -4,6 +4,9 @@ import ImageBox from "../../../../components/ImageBox";
 import Images from "../../../../components/Images";
 import Typography from "../../../../components/Typography";
 
+interface IAboutBoxProps {
+  margin?: string;
+}
 interface IMiniAboutBoxProps {
   title: string;
   subtitle: string;
@@ -11,11 +14,13 @@ interface IMiniAboutBoxProps {
   imageSrc?: string;
 }
 
-const StyledAboutBox = styled.div`
+const StyledAboutBox = styled.div<{
+  margin?: string;
+}>`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 80px;
+  margin: ${(props) => props.margin};
   @media only screen and (max-width: 992px) {
     margin-bottom: 40px;
   }
@@ -75,9 +80,11 @@ function MiniAboutBox(props: IMiniAboutBoxProps) {
   );
 }
 
-function AboutBox() {
+function AboutBox(props: IAboutBoxProps) {
+  const { margin } = props;
+
   return (
-    <StyledAboutBox>
+    <StyledAboutBox margin={margin}>
       <StyledImageBox imageSrc={Images.CAKE_ELEMENT7} margin="0 80px 0 0" />
       <StyledContentBox>
         <MiniAboutBox

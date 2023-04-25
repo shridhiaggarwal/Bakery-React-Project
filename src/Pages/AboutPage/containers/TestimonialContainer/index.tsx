@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import TeamMemberCard from "../TeamMemberCard";
 import Images from "../../../../components/Images";
 import Typography from "../../../../components/Typography";
+import TestimonialCard from "../TestimonialCard";
 
-interface ITeamContainerProps {
+interface ITestimonialContainerProps {
   margin?: string;
 }
 
@@ -14,33 +14,33 @@ const StyledTeamContainer = styled.div<{
   margin: ${(props) => props.margin};
 `;
 
-function TeamContainer(props: ITeamContainerProps) {
+function TestimonialContainer(props: ITestimonialContainerProps) {
   const { margin } = props;
 
-  const teamData = [
-    { name: "Ishita Kapoor", designation: "Owner", imageSrc: Images.TEAM1 },
+  const testimonialData = [
+    { name: "Ishita Kapoor", testimonial: "Owner", imageSrc: Images.TESTMONIAL1 },
     {
       name: "Takashi Tanaka",
       designation: "Head Chef",
-      imageSrc: Images.TEAM2,
+      imageSrc: Images.TESTMONIAL2,
     },
-    { name: "Emily Thompson", designation: "Baker", imageSrc: Images.TEAM3 },
-    { name: "Rohit Singh", designation: "Baker", imageSrc: Images.TEAM4 },
+    { name: "Emily Thompson", testimonial: "Baker", imageSrc: Images.TESTMONIAL3 },
+    { name: "Rohit Singh", testimonial: "Baker", imageSrc: Images.TESTMONIAL4 },
   ];
 
   return (
     <StyledTeamContainer margin={margin}>
       <Typography variant="h4" color="#da5162" margin="0 0 32px 0">
-        Our Team
+        Sweet Success Stories
       </Typography>
       <div className="row">
-        {teamData.map((member) => {
+        {testimonialData.map((data) => {
           return (
             <div className="col-md-3">
-              <TeamMemberCard
-                name={member.name}
-                designation={member.designation}
-                imageSrc={member.imageSrc}
+              <TestimonialCard
+                name={data.name}
+                designation={data.testimonial}
+                imageSrc={data.imageSrc}
               />
             </div>
           );
@@ -50,4 +50,4 @@ function TeamContainer(props: ITeamContainerProps) {
   );
 }
 
-export default TeamContainer;
+export default TestimonialContainer;
