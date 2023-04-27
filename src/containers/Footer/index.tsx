@@ -85,7 +85,7 @@ function Footer() {
       <FooterLogoText>
         <FooterLogo>
           <a href="#home">
-            <img src={Images.PINK_LOGO} />
+            <img src={Images.PINK_LOGO} alt="bakery logo - pink color"/>
           </a>
           <Typography
             variant="h5"
