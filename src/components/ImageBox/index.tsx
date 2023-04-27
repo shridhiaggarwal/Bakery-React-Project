@@ -5,6 +5,7 @@ interface IImageBoxProps {
   className?: string;
   backgroundImageSrc?: string;
   imageSrc?: string;
+  imageAlt?: string;
   margin?: string;
   imageWidth?: string;
 }
@@ -31,16 +32,16 @@ const ImageBoxImage = styled.img<{
 `;
 
 function ImageBox(props: IImageBoxProps) {
-  const { className, backgroundImageSrc, imageSrc, margin, imageWidth } = props;
+  const { className, backgroundImageSrc, imageSrc, imageAlt, margin, imageWidth } = props;
 
   return (
     <>
       {backgroundImageSrc ? (
         <ImageSection backgroundImageSrc={backgroundImageSrc} className={className}>
-          <ImageBoxImage src={imageSrc} margin={margin} width={imageWidth} />
+          <ImageBoxImage src={imageSrc} margin={margin} width={imageWidth} alt={imageAlt}/>
         </ImageSection>
       ) : (
-        <ImageBoxImage className={className} src={imageSrc} margin={margin} width={imageWidth} />
+        <ImageBoxImage className={className} src={imageSrc} margin={margin} width={imageWidth} alt={imageAlt}/>
       )}
     </>
   );

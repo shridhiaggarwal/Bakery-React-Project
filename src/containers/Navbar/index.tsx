@@ -7,7 +7,7 @@ function Navbar() {
     <>
       <nav id="home" className="navbar navbar-expand-lg fixed-top">
         <Link className="navbar-brand" to="/">
-          <img src={Images.WHITE_LOGO} />
+          <img src={Images.WHITE_LOGO} alt="bakery logo - white color"/>
           <h3 className="navbar-text">Bakery!</h3>
         </Link>
         <button

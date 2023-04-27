@@ -73,7 +73,7 @@ function ContactForm(props: IContactFormProps) {
             required={true}
           />
         </div>
-        <div className="col-md-5">
+        <div className="col-md-5 col-lg-4">
           <StyledImageBox imageSrc={Images.CAKE_ELEMENT6} />
         </div>
       </StyledRow>
