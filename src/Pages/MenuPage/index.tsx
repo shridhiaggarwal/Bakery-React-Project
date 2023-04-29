@@ -82,6 +82,46 @@ const menuItems = [
     catergory: MenuItemType.CAKE,
   },
   {
+    name: "Red Velvet",
+    price: 250,
+    description:
+      "Our pastries are made with the finest ingredients, baked to perfection and filled with heavenly flavors.",
+    imageSrc: Images.MENU12,
+    catergory: MenuItemType.PASTRY,
+  },
+  {
+    name: "Pineapple Pastry",
+    price: 250,
+    description:
+      "Indulge in the decadence of our light, flaky pastries filled with sweet or savory delights.",
+    imageSrc: Images.MENU13,
+    catergory: MenuItemType.PASTRY,
+  },
+  {
+    name: "Chocolate Pastry",
+    price: 250,
+    description:
+      "Our pastries are a delicious combination of buttery, flaky layers and rich, flavorful fillings",
+    imageSrc: Images.MENU14,
+    catergory: MenuItemType.PASTRY,
+  },
+  {
+    name: "Orange Pastry",
+    price: 250,
+    description:
+      "Our pastries are not just a treat for your taste buds, but also a feast for your eyes with their beautifully crafted designs.",
+    imageSrc: Images.MENU15,
+    catergory: MenuItemType.PASTRY,
+  },
+  {
+    name: "Mango Pastry",
+    price: 250,
+    description:
+      "Treat yourself to our delicate, melt-in-your-mouth pastries that are a perfect accompaniment to your favorite beverage.",
+    imageSrc: Images.MENU16,
+    catergory: MenuItemType.PASTRY,
+  },
+  {
     name: "Cupcake Box",
     price: 250,
     description:
@@ -119,6 +159,7 @@ function MenuPage(props: IMenuPageProps) {
   const { homepageSection } = props;
   const [filteredMenuItems, setFilteredMenuItems] =
     useState<Array<IMenuCardProps>>(menuItems);
+  const [activeTab, setActiveTab] = useState<string>(MenuItemType.CAKE);
 
   const getFilteredMenuItems = (category: string) => {
     let filtered: Array<IMenuCardProps> = menuItems.filter(
@@ -128,23 +169,22 @@ function MenuPage(props: IMenuPageProps) {
   };
 
   React.useEffect(() => {
-    getFilteredMenuItems(MenuItemType.CAKE);
-  }, []);
+    if (activeTab) {
+      getFilteredMenuItems(activeTab);
+    }
+  }, [activeTab]);
 
   const tabsListItems = [
     {
       value: "Cakes",
-      onTabClick: getFilteredMenuItems,
       tabCategory: MenuItemType.CAKE,
     },
     {
       value: "Pastries",
-      onTabClick: getFilteredMenuItems,
       tabCategory: MenuItemType.PASTRY,
     },
     {
       value: "Cupcakes and others",
-      onTabClick: getFilteredMenuItems,
       tabCategory: MenuItemType.CUPCAKE,
     },
   ];
@@ -169,7 +209,11 @@ function MenuPage(props: IMenuPageProps) {
         textAlign="center"
       />
       <div>
-        <Tabs tabsList={tabsListItems} defaultActiveTab={MenuItemType.CAKE} />
+        <Tabs
+          tabsList={tabsListItems}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        />
         <StyledDivider />
         <MenuCardsContainer menuItems={filteredMenuItems} />
       </div>

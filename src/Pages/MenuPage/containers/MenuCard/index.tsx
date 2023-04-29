@@ -40,6 +40,7 @@ const MenuCardText = styled.div`
   display: flex;
   flex-direction: column;
   padding-right: 20px;
+  width: 100%;
 `;
 
 const MenuNamePrice = styled.div`

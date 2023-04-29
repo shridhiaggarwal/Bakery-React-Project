@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 interface ITabProps {
   value: string;
-  onTabClick: (tabCategory: string) => void;
   tabCategory: string;
 }
 
 interface ITabListProps {
   tabsList: Array<ITabProps>;
-  defaultActiveTab: string;
+  activeTab: string;
+  setActiveTab: (tabCategory: string) => void;
 }
 
 const StyledTabs = styled.ul`
@@ -32,13 +32,12 @@ const StyledTabs = styled.ul`
 `;
 
 function Tabs(props: ITabListProps) {
-  const { tabsList, defaultActiveTab } = props;
-  const [activeTab, setActiveTab] = useState(defaultActiveTab);
+  const { tabsList, activeTab, setActiveTab } = props;
 
   return (
     <StyledTabs className="nav nav-pills" role="tablist">
       {tabsList.map((tabData) => {
-        const { value, onTabClick, tabCategory } = tabData;
+        const { value, tabCategory } = tabData;
         return (
           <li className="nav-item">
             <a
@@ -47,10 +46,7 @@ function Tabs(props: ITabListProps) {
               }
               data-toggle="pill"
               href="#"
-              onClick={() => {
-                onTabClick(tabCategory);
-                setActiveTab(tabCategory);
-              }}
+              onClick={() => setActiveTab(tabCategory)}
             >
               {value}
             </a>

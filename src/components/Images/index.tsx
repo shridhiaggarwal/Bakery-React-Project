@@ -25,8 +25,11 @@ import menu8 from "../../images/menu/menu8.jpg";
 import menu9 from "../../images/menu/menu9.jpg";
 import menu10 from "../../images/menu/menu10.jpg";
 import menu11 from "../../images/menu/menu11.jpg";
-// import menu7 from "../../images/menu/menu7.jpg";
-// import menu7 from "../../images/menu/menu7.jpg";
+import menu12 from "../../images/menu/menu12.jpg";
+import menu13 from "../../images/menu/menu13.jpg";
+import menu14 from "../../images/menu/menu14.jpg";
+import menu15 from "../../images/menu/menu15.jpg";
+import menu16 from "../../images/menu/menu16.jpg";
 import service1 from "../../images/services/service1.jpeg";
 import service2 from "../../images/services/service2.jpeg";
 import service3 from "../../images/services/service3.png";
@@ -85,6 +88,11 @@ const Images = {
   MENU9: menu9,
   MENU10: menu10,
   MENU11: menu11,
+  MENU12: menu12,
+  MENU13: menu13,
+  MENU14: menu14,
+  MENU15: menu15,
+  MENU16: menu16,
   SERVICE1: service1,
   SERVICE2: service2,
   SERVICE3: service3,
