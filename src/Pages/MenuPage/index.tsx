@@ -155,6 +155,21 @@ const menuItems = [
   },
 ];
 
+const tabsListItems = [
+  {
+    value: "Cakes",
+    tabCategory: MenuItemType.CAKE,
+  },
+  {
+    value: "Pastries",
+    tabCategory: MenuItemType.PASTRY,
+  },
+  {
+    value: "Cupcakes and others",
+    tabCategory: MenuItemType.CUPCAKE,
+  },
+];
+
 function MenuPage(props: IMenuPageProps) {
   const { homepageSection } = props;
   const [filteredMenuItems, setFilteredMenuItems] =
@@ -174,20 +189,9 @@ function MenuPage(props: IMenuPageProps) {
     }
   }, [activeTab]);
 
-  const tabsListItems = [
-    {
-      value: "Cakes",
-      tabCategory: MenuItemType.CAKE,
-    },
-    {
-      value: "Pastries",
-      tabCategory: MenuItemType.PASTRY,
-    },
-    {
-      value: "Cupcakes and others",
-      tabCategory: MenuItemType.CUPCAKE,
-    },
-  ];
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <MenuSection>

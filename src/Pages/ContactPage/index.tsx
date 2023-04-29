@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import Typography from "../../components/Typography";
 import ContactForm from "./containers/ContactForm";
@@ -50,6 +51,11 @@ function ContactInfoItem(props: IContactInfoItemProps) {
 }
 
 function ContactPage(props: IContactPageProps) {
+  
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <ContactSection>
       <Typography

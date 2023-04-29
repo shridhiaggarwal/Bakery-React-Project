@@ -1,3 +1,4 @@
+import React from "react";
 import BannerCarousel from "./containers/BannerCarousel";
 import OfferOfWeek from "./containers/OfferOfWeek";
 import MadeWithLove from "./containers/MadeWithLove";
@@ -8,15 +9,19 @@ import CompleteMenuBox from "./containers/CompleteMenuBox";
 import CustomOrder from "../../containers/CustomOrder";
 
 function HomePage() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <BannerCarousel />
-      <OfferOfWeek/>
+      <OfferOfWeek />
       <MadeWithLove />
-      <ServicesPage homepageSection={true}/>
+      <ServicesPage homepageSection={true} />
       <QuoteBox />
       <MenuHomePage />
-      <CompleteMenuBox/>
+      <CompleteMenuBox />
       <CustomOrder />
     </>
   );
