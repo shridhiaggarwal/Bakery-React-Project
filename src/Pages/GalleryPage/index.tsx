@@ -4,6 +4,7 @@ import Modal from "../../components/Modal";
 import styled from "styled-components";
 import Typography from "../../components/Typography";
 import GalleryImagesGrid, { IImageProps } from "./containers/GalleryImagesGrid";
+import ModalContent from "./containers/ImageModalContent";
 
 const imagesArray = [
   {
@@ -60,38 +61,6 @@ const GallerySection = styled.section`
     padding: 40px 20px;
   }
 `;
-
-const ModalImage = styled.img`
-  max-height: 400px;
-  width: 100%;
-`;
-
-const Caption = styled(Typography)`
-  display: block;
-  width: 100%;
-`;
-
-interface IModalContentProps {
-  selectedImage: IImageProps;
-}
-
-function ModalContent(props: IModalContentProps) {
-  const { selectedImage } = props;
-
-  return (
-    <>
-      <ModalImage src={selectedImage.url} alt={selectedImage.caption} />
-      <Caption
-        variant="caption"
-        fontWeight="bold"
-        padding="16px 0 0 0"
-        textAlign="center"
-      >
-        {selectedImage.caption}
-      </Caption>
-    </>
-  );
-}
 
 function GalleryPage() {
   const [modalOpen, setModalOpen] = React.useState<boolean>(false);
