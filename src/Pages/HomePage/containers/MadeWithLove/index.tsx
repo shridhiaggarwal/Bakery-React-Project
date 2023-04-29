@@ -57,6 +57,7 @@ function MadeWithLove() {
             text: "Read more",
             onClick: handleAboutButton,
           }}
+          textBoxWidth="800px"
         />
       </MadeWithLoveSection>
     </>

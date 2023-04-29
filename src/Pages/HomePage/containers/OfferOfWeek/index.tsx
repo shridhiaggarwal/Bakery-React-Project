@@ -63,6 +63,7 @@ function OfferOfWeek() {
             onClick: handleMenuButton
           }}
           textAlign="center"
+          textBoxWidth="600px"
         />
         <StyledImageBox
           backgroundImageSrc={Images.BACKGROUND1}

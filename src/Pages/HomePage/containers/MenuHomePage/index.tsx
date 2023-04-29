@@ -73,7 +73,6 @@ function MenuHomePage() {
           margin: "0 0 80px 0",
           preLineWrapper: true,
         }}
-        textBoxWidth="100%"
         textAlign="center"
       />
       <MenuCardsContainer menuItems={menuItems} />

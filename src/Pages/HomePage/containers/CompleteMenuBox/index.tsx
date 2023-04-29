@@ -53,6 +53,7 @@ function CompleteMenuBox() {
           text: "Explore complete menu",
           onClick: handleMenuButton
         }}
+        textBoxWidth="800px"
       />
       <StyledImageBox
         backgroundImageSrc={Images.BACKGROUND1}
