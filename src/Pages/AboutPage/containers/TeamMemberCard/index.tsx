@@ -24,7 +24,6 @@ const StyledMemberCard = styled.div`
     border-left: 4px dotted #da5162;
     border-right: 4px dotted #da5162;
     border-top: 4px dotted #da5162;
-    border-bottom: 4px dotted #da5162;
   }
   @media (max-width: 768px){
     margin-bottom: 16px;

@@ -112,6 +112,10 @@ function AboutPage() {
     },
   ];
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <AboutSection>
       <Typography
