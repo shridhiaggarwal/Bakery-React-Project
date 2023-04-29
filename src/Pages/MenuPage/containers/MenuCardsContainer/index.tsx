@@ -2,15 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import MenuCard, { IMenuCardProps } from "../MenuCard";
 
-interface IMenuCardsContainerProps {
+export interface IMenuCardsContainerProps {
   menuItems: Array<IMenuCardProps>;
 }
 
 const MenuContainer = styled.div`
-  @media only screen and (max-width: 992px) {
-    .container-fluid {
-      padding: 0px;
-    }
+  .container-fluid {
+    padding: 0px;
   }
 `;
 

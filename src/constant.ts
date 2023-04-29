@@ -1,3 +1,5 @@
-export const commonFunction = () => {
-    return;
+export enum MenuItemType {
+  CAKE = "cake",
+  PASTRY = "pastry",
+  CUPCAKE = "cupcake",
 }

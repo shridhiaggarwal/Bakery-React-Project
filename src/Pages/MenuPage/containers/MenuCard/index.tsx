@@ -1,30 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import Typography from "../../../../components/Typography";
+import { MenuItemType } from "../../../../constant";
 
 export interface IMenuCardProps {
   name: string;
   price: number;
   description: string;
   imageSrc: string;
+  catergory?: MenuItemType;
 }
 
 const StyledMenuCard = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #faf6f2;
   border-left: 4px solid #da5162;
-  border-right: 2px dotted transparent;
-  border-top: 2px dotted transparent;
-  border-bottom: 2px dotted white;
+  border-right: 4px dotted transparent;
+  border-top: 4px dotted transparent;
+  border-bottom: 4px dotted white;
   border-radius: 8px;
   position: relative;
   padding: 30px;
   margin-bottom: 2rem;
   &:hover {
-    border-right: 2px dotted #da5162;
-    border-top: 2px dotted #da5162;
-    border-bottom: 2px dotted #da5162;
+    border-right: 4px dotted #da5162;
+    border-top: 4px dotted #da5162;
+    border-bottom: 4px dotted #da5162;
     border-radius: 8px;
   }
   @media only screen and (max-width: 576px) {
