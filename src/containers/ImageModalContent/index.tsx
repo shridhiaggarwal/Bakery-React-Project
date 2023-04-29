@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Typography from "../../../../components/Typography";
-import { IImageProps } from "../GalleryImagesGrid";
+import Typography from "../../components/Typography";
 
-interface IModalContentProps {
+export interface IImageProps {
+  url: string;
+  caption?: string;
+}
+
+interface IImageModalContentProps {
   selectedImage: IImageProps;
 }
 
@@ -17,7 +21,7 @@ const Caption = styled(Typography)`
   width: 100%;
 `;
 
-function ModalContent(props: IModalContentProps) {
+function ImageModalContent(props: IImageModalContentProps) {
   const { selectedImage } = props;
 
   return (
@@ -35,4 +39,4 @@ function ModalContent(props: IModalContentProps) {
   );
 }
 
-export default ModalContent;
+export default ImageModalContent;

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Typography from "../../../../components/Typography";
 import { MenuItemType } from "../../../../constant";
+import { IImageProps } from "../../../../containers/ImageModalContent";
 
 export interface IMenuCardProps {
   name: string;
@@ -9,6 +10,10 @@ export interface IMenuCardProps {
   description: string;
   imageSrc: string;
   catergory?: MenuItemType;
+  onImageClick?: (value: IImageProps) => void;
+  dataToggle?: string;
+  dataTarget?: string;
+  dataBackdrop?: boolean;
 }
 
 const StyledMenuCard = styled.div`
@@ -65,13 +70,27 @@ const MenuCardImage = styled.img`
   object-fit: cover;
   border: 4px solid #da5162;
   border-radius: 50%;
+  cursor: pointer;
   @media only screen and (max-width: 576px) {
     margin-bottom: 16px;
   }
 `;
 
 function MenuCard(props: IMenuCardProps) {
-  const { name, price, description, imageSrc } = props;
+  const {
+    name,
+    price,
+    description,
+    imageSrc,
+    onImageClick,
+    dataToggle,
+    dataTarget,
+    dataBackdrop,
+  } = props;
+
+  const handleImageClick = (image: IImageProps) => {
+    onImageClick && onImageClick(image);
+  };
 
   return (
     <StyledMenuCard>
@@ -89,9 +108,15 @@ function MenuCard(props: IMenuCardProps) {
         </StyledWrapTypography>
       </MenuCardText>
       <div>
-        <a target="_blank" href={imageSrc}>
-          <MenuCardImage src={imageSrc} />
-        </a>
+        <MenuCardImage
+          src={imageSrc}
+          onClick={() =>
+            handleImageClick({ url: imageSrc })
+          }
+          data-toggle={dataToggle}
+          data-target={dataTarget}
+          data-backdrop={dataBackdrop}
+        />
       </div>
     </StyledMenuCard>
   );
