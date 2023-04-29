@@ -3,51 +3,43 @@ import Images from "../../components/Images";
 import Modal from "../../components/Modal";
 import styled from "styled-components";
 import Typography from "../../components/Typography";
-import GalleryImagesGrid, { IImageProps } from "./containers/GalleryImagesGrid";
+import GalleryImagesGrid from "./containers/GalleryImagesGrid";
+import ImageModalContent, { IImageProps } from "../../containers/ImageModalContent";
 
 const imagesArray = [
   {
-    id: 1,
     url: Images.GALLERY1,
     caption: "Sweet and delicious, just like you.",
   },
   {
-    id: 2,
     url: Images.GALLERY2,
     caption: "Indulge yourself with our mouthwatering treats.",
   },
   {
-    id: 3,
     url: Images.GALLERY3,
     caption: "Happiness is a warm pastry.",
   },
   {
-    id: 4,
     url: Images.GALLERY4,
     caption: "Baking is love made visible.",
   },
   {
-    id: 5,
     url: Images.GALLERY5,
     caption: "Happy birthday to the sweetest person we know!",
   },
   {
-    id: 6,
     url: Images.GALLERY6,
     caption: "Treat yourself, you deserve it.",
   },
   {
-    id: 7,
     url: Images.GALLERY7,
     caption: "Sweeten up your day with our treats.",
   },
   {
-    id: 8,
     url: Images.GALLERY8,
     caption: "Sometimes, all you need is a cupcake.",
   },
   {
-    id: 9,
     url: Images.GALLERY9,
     caption: "Age is just a number. Cake is eternal.",
   },
@@ -60,38 +52,6 @@ const GallerySection = styled.section`
     padding: 40px 20px;
   }
 `;
-
-const ModalImage = styled.img`
-  max-height: 400px;
-  width: 100%;
-`;
-
-const Caption = styled(Typography)`
-  display: block;
-  width: 100%;
-`;
-
-interface IModalContentProps {
-  selectedImage: IImageProps;
-}
-
-function ModalContent(props: IModalContentProps) {
-  const { selectedImage } = props;
-
-  return (
-    <>
-      <ModalImage src={selectedImage.url} alt={selectedImage.caption} />
-      <Caption
-        variant="caption"
-        fontWeight="bold"
-        padding="16px 0 0 0"
-        textAlign="center"
-      >
-        {selectedImage.caption}
-      </Caption>
-    </>
-  );
-}
 
 function GalleryPage() {
   const [modalOpen, setModalOpen] = React.useState<boolean>(false);
@@ -135,7 +95,7 @@ function GalleryPage() {
         <>
           <Modal
             modalId="galleryModal"
-            modalContent={<ModalContent selectedImage={selectedImage} />}
+            modalContent={<ImageModalContent selectedImage={selectedImage} />}
             onClose={handleModalClose}
             showBackdrop={true}
           />

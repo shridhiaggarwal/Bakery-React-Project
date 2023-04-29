@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Masonry from "react-masonry-css";
-
-export interface IImageProps {
-  id: string | number;
-  url: string;
-  caption?: string;
-}
+import { IImageProps } from "../../../../containers/ImageModalContent";
 
 interface IGalleyImagesGridProps {
   imagesArray: Array<IImageProps>;
@@ -63,7 +58,7 @@ function GalleryImagesGrid(props: IGalleyImagesGridProps) {
       >
         {imagesArray.map((image, key) => {
           return (
-            <div key={image.id}>
+            <div key={key}>
               <ImageItem
                 src={image.url}
                 alt={image.caption}

@@ -1,30 +1,38 @@
 import React from "react";
 import styled from "styled-components";
 import Typography from "../../../../components/Typography";
+import { MenuItemType } from "../../../../constant";
+import { IImageProps } from "../../../../containers/ImageModalContent";
 
 export interface IMenuCardProps {
   name: string;
   price: number;
   description: string;
   imageSrc: string;
+  catergory?: MenuItemType;
+  onImageClick?: (value: IImageProps) => void;
+  dataToggle?: string;
+  dataTarget?: string;
+  dataBackdrop?: boolean;
 }
 
 const StyledMenuCard = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #faf6f2;
   border-left: 4px solid #da5162;
-  border-right: 2px dotted transparent;
-  border-top: 2px dotted transparent;
-  border-bottom: 2px dotted white;
+  border-right: 4px dotted transparent;
+  border-top: 4px dotted transparent;
+  border-bottom: 4px dotted white;
   border-radius: 8px;
   position: relative;
   padding: 30px;
   margin-bottom: 2rem;
   &:hover {
-    border-right: 2px dotted #da5162;
-    border-top: 2px dotted #da5162;
-    border-bottom: 2px dotted #da5162;
+    border-right: 4px dotted #da5162;
+    border-top: 4px dotted #da5162;
+    border-bottom: 4px dotted #da5162;
     border-radius: 8px;
   }
   @media only screen and (max-width: 576px) {
@@ -37,6 +45,7 @@ const MenuCardText = styled.div`
   display: flex;
   flex-direction: column;
   padding-right: 20px;
+  width: 100%;
 `;
 
 const MenuNamePrice = styled.div`
@@ -61,13 +70,27 @@ const MenuCardImage = styled.img`
   object-fit: cover;
   border: 4px solid #da5162;
   border-radius: 50%;
+  cursor: pointer;
   @media only screen and (max-width: 576px) {
     margin-bottom: 16px;
   }
 `;
 
 function MenuCard(props: IMenuCardProps) {
-  const { name, price, description, imageSrc } = props;
+  const {
+    name,
+    price,
+    description,
+    imageSrc,
+    onImageClick,
+    dataToggle,
+    dataTarget,
+    dataBackdrop,
+  } = props;
+
+  const handleImageClick = (image: IImageProps) => {
+    onImageClick && onImageClick(image);
+  };
 
   return (
     <StyledMenuCard>
@@ -85,9 +108,15 @@ function MenuCard(props: IMenuCardProps) {
         </StyledWrapTypography>
       </MenuCardText>
       <div>
-        <a target="_blank" href={imageSrc}>
-          <MenuCardImage src={imageSrc} />
-        </a>
+        <MenuCardImage
+          src={imageSrc}
+          onClick={() =>
+            handleImageClick({ url: imageSrc })
+          }
+          data-toggle={dataToggle}
+          data-target={dataTarget}
+          data-backdrop={dataBackdrop}
+        />
       </div>
     </StyledMenuCard>
   );
