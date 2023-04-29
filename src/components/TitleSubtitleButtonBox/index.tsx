@@ -30,7 +30,7 @@ const TextBox = styled.div<{
   width?: string;
   textAlign?: string;
 }>`
-  width: ${(props) => (props.width ? props.width : "600px")};
+  width: ${(props) => (props.width ? props.width : "100%")};
   text-align: ${(props) => props.textAlign};
 `;
 

@@ -9,7 +9,7 @@ const CustomOrderSection = styled.section`
   background-color: #faf6f2;
   border: 4px solid #da5162;
   border-radius: 8px;
-  margin: 80px 160px;
+  margin: 80px;
   padding: 30px 40px;
   display: flex;
   align-items: center;
@@ -58,7 +58,6 @@ function CustomOrder() {
           text: "Contact us",
           onClick: handleContactButton
         }}
-        textBoxWidth="100%"
       />
     </CustomOrderSection>
   );

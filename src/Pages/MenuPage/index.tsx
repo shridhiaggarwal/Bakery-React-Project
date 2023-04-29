@@ -199,13 +199,11 @@ function MenuPage(props: IMenuPageProps) {
           margin: "0 0 2rem 0",
         }}
         subtitle={{
-          value: `Experience the indulgence of our signature desserts!
-    Our menu is carefully crafted to satisfy every craving and delight every palate.`,
+          value: `Experience the indulgence of our signature desserts! Our menu is carefully crafted to satisfy every craving and delight every palate.`,
           variant: "body1",
           margin: "0 0 40px 0",
           preLineWrapper: true,
         }}
-        textBoxWidth="100%"
         textAlign="center"
       />
       <div>

@@ -43,7 +43,6 @@ function QuoteBox() {
           color: "#da5162",
           fontWeight: "bolder",
         }}
-        textBoxWidth="100%"
       />
     </QuoteBoxSection>
   );

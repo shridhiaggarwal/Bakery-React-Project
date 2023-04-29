@@ -74,7 +74,6 @@ function ServiceCard(props: IServiceCardProps) {
           variant: "body1",
         }}
         textAlign="center"
-        textBoxWidth="100%"
       />
       {button && <Button onButtonClick={handleButtonClick}>{button.text}</Button>}
     </StyledServiceCard>

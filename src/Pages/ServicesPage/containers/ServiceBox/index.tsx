@@ -64,6 +64,7 @@ function ServiceBox(props: IServiceBoxProps) {
           text: "Read more",
           onClick: handleServiceButton
         } : undefined}
+        textBoxWidth="800px"
       />
       <StyledImageBox imageSrc={Images.CAKE_ELEMENT2} margin="0 0 0 80px" />
     </StyledServiceBox>
