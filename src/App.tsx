@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import MenuPage from "./Pages/MenuPage";
@@ -12,7 +12,7 @@ import ScrollToTopButton from "./containers/ScrollToTopButton";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -24,7 +24,7 @@ function App() {
         </Routes>
         <Footer />
         <ScrollToTopButton />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
