@@ -6,10 +6,12 @@ interface IIconButtonProps {
   onButtonClick?: () => void;
   margin?: string;
   className?: string;
+  borderRadius?: string;
 }
 
 const StyledButton = styled.button<{
   margin?: string;
+  borderRadius?: string;
 }>`
   width: 32px;
   height: 32px;
@@ -20,7 +22,7 @@ const StyledButton = styled.button<{
   background-color: #da5162;
   color: white;
   border: 2px solid #da5162;
-  border-radius: 4px;
+  border-radius: ${(props) => props.borderRadius ? props.borderRadius : "4px"};
   margin: ${(props) => props.margin};
   &:hover,
   &:active {
@@ -34,14 +36,14 @@ const StyledButton = styled.button<{
 `;
 
 function IconButton(props: IIconButtonProps) {
-  const { children, onButtonClick, margin, className } = props;
+  const { children, onButtonClick, margin, className, borderRadius } = props;
 
   const handleClick = () => {
     onButtonClick && onButtonClick();
   };
 
   return (
-    <StyledButton type="button" onClick={handleClick} margin={margin} className={className}>
+    <StyledButton type="button" onClick={handleClick} margin={margin} borderRadius={borderRadius} className={className}>
       {children}
     </StyledButton>
   );

@@ -7,6 +7,7 @@ import GalleryPage from "./Pages/GalleryPage";
 import ContactPage from "./Pages/ContactPage";
 import Navbar from "./containers/Navbar";
 import Footer from "./containers/Footer";
+import ScrollToTopButton from "./containers/ScrollToTopButton";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
+        <ScrollToTopButton />
       </BrowserRouter>
     </>
   );
