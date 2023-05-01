@@ -4,9 +4,9 @@ import OfferOfWeek from "./containers/OfferOfWeek";
 import MadeWithLove from "./containers/MadeWithLove";
 import ServicesPage from "../ServicesPage";
 import QuoteBox from "./containers/QuoteBox";
-import MenuHomePage from "./containers/MenuHomePage";
 import CompleteMenuBox from "./containers/CompleteMenuBox";
 import CustomOrder from "../../containers/CustomOrder";
+import MenuPage from "../MenuPage";
 
 function HomePage() {
   React.useEffect(() => {
@@ -20,7 +20,7 @@ function HomePage() {
       <MadeWithLove />
       <ServicesPage homepageSection={true} />
       <QuoteBox />
-      <MenuHomePage />
+      <MenuPage homepageSection={true} />
       <CompleteMenuBox />
       <CustomOrder />
     </>

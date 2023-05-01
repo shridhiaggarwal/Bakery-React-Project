@@ -22,9 +22,9 @@ const StyledMenuCard = styled.div`
   justify-content: space-between;
   background-color: #faf6f2;
   border-left: 4px solid #da5162;
-  border-right: 4px dotted transparent;
-  border-top: 4px dotted transparent;
-  border-bottom: 4px dotted white;
+  border-right: 4px solid transparent;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
   border-radius: 8px;
   position: relative;
   padding: 30px;

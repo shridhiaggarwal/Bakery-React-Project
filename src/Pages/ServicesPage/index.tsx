@@ -20,7 +20,7 @@ const ServiceSection = styled.section<{
   position: relative;
   @media only screen and (max-width: 992px) {
     padding: ${(props) =>
-      props.homepageSection ? "0px 20px 40px 20px" : "40px 20px"};
+      props.homepageSection ? "0px 20px 80px 20px" : "80px 20px"};
   }
 `;
 
