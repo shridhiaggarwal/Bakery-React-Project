@@ -1,9 +1,16 @@
 import React from "react";
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 
 function Counter(props: any) {
-  const { className, start, end, delay, duration, prefix, suffix, separator } =
-    props;
+  const {
+    className,
+    start,
+    end,
+    delay = 0,
+    duration = 2,
+    prefix = "",
+    suffix = "",
+  } = props;
 
   return (
     <CountUp
@@ -11,13 +18,12 @@ function Counter(props: any) {
       end={end}
       delay={delay}
       duration={duration}
-      separator={separator}
       prefix={prefix}
       suffix={suffix}
     >
       {({ countUpRef }) => (
         <div>
-          <span ref={countUpRef} className={className}/>
+          <span ref={countUpRef} className={className} />
         </div>
       )}
     </CountUp>
