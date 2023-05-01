@@ -27,7 +27,7 @@ const StyledTestimonialContainer = styled.div<{
 
 const StyledTestimonialCarousel = styled.div`
   .owl-item {
-    height: 310px;
+    margin-bottom: 8px;
   }
 
   .owl-theme .owl-dots .owl-dot:focus {

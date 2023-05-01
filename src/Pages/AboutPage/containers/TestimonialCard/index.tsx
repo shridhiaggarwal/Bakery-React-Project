@@ -28,6 +28,8 @@ const StyledTestimonialCard = styled.div`
   }
   @media only screen and (max-width: 576px) {
     padding: 12px;
+    flex-direction: column;
+    height: 100% !important;
   }
 `;
 

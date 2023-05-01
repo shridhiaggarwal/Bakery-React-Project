@@ -21,7 +21,7 @@ function Navbar() {
         >
           <i className="fa fa-bars" aria-hidden="true"></i>
         </button>
-        <div className="collapse navbar-collapse justify-content-end" id="menu">
+        <div className="collapse navbar-collapse justify-content-end" id="menu"  data-toggle="collapse" data-target=".navbar-collapse">
           <ul className="navbar-nav">
             <li className="navbar-item active">
               <NavLink
