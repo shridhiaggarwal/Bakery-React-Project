@@ -20,13 +20,14 @@ function Counter(props: CountUpProps) {
       duration={duration}
       prefix={prefix}
       suffix={suffix}
-    >
-      {({ countUpRef }) => (
-        <div>
-          <span ref={countUpRef} className={className} />
-        </div>
-      )}
-    </CountUp>
+      className={className}
+    />
+    //   {({ countUpRef }) => (
+    //     <div>
+    //       <span ref={countUpRef} className={className} />
+    //     </div>
+    //   )}
+    // </CountUp>
   );
 }
 

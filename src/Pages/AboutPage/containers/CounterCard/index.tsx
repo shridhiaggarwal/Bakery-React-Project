@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Counter from "../../../../components/Counter/Index";
+import Counter from "../../../../components/Counter";
 import Typography from "../../../../components/Typography";
 
 const StyledCounterCard = styled.div`
