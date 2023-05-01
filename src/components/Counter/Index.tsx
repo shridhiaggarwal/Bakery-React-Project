@@ -1,7 +1,7 @@
 import React from "react";
-import CountUp, { CountUpProps } from 'react-countup';
+import CountUp from 'react-countup';
 
-function Counter(props: CountUpProps) {
+function Counter(props: any) {
   const { className, start, end, delay, duration, prefix, suffix, separator } =
     props;
 
