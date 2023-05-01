@@ -45,7 +45,7 @@ function CounterCard(props: ICounterCardProps) {
       <Counter
         start={counterStart}
         end={counterEnd}
-        prefix="+"
+        prefix="+ "
         delay={1}
         duration={4}
         className="counterSpan"
