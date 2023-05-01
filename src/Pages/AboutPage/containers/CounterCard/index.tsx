@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Counter from "../../../../components/Counter/Index";
+import Counter from "../../../../components/Counter";
 import Typography from "../../../../components/Typography";
 
 const StyledCounterCard = styled.div`
@@ -45,8 +45,7 @@ function CounterCard(props: ICounterCardProps) {
       <Counter
         start={counterStart}
         end={counterEnd}
-        prefix="+"
-        delay={1}
+        prefix="+ "
         duration={4}
         className="counterSpan"
       />
