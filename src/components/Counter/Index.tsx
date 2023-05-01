@@ -1,12 +1,12 @@
 import React from "react";
-import CountUp from "react-countup";
+import CountUp, { CountUpProps } from "react-countup";
 
-function Counter(props: any) {
+function Counter(props: CountUpProps) {
   const {
     className,
     start,
     end,
-    delay = 0,
+    delay = null,
     duration = 2,
     prefix = "",
     suffix = "",
