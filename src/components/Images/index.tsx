@@ -32,12 +32,14 @@ import menu15 from "../../images/menu/menu15.jpg";
 import menu16 from "../../images/menu/menu16.jpg";
 import menu17 from "../../images/menu/menu17.jpg";
 import menu18 from "../../images/menu/menu18.jpg";
-import menu19 from "../../images/menu/menu19.png";
-import service1 from "../../images/services/service1.jpeg";
-import service2 from "../../images/services/service2.jpeg";
-import service3 from "../../images/services/service3.png";
-import service4 from "../../images/services/service4.jpeg";
-import service5 from "../../images/services/service5.jpeg";
+import menu19 from "../../images/menu/menu19.jpg";
+import menu20 from "../../images/menu/menu20.jpg";
+import menu21 from "../../images/menu/menu21.jpg";
+import service1 from "../../images/services/service1.jpg";
+import service2 from "../../images/services/service2.jpg";
+import service3 from "../../images/services/service3.jpg";
+import service4 from "../../images/services/service4.jpg";
+import service5 from "../../images/services/service5.jpg";
 import service6 from "../../images/services/service6.jpg";
 import slider1 from "../../images/slider/slider1.png";
 import slider2 from "../../images/slider/slider2.png";
@@ -99,6 +101,8 @@ const Images = {
   MENU17: menu17,
   MENU18: menu18,
   MENU19: menu19,
+  MENU20: menu20,
+  MENU21: menu21,
   SERVICE1: service1,
   SERVICE2: service2,
   SERVICE3: service3,

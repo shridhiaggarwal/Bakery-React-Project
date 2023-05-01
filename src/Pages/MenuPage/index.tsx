@@ -136,6 +136,22 @@ const menuItems = [
     catergory: MenuItemType.PASTRY,
   },
   {
+    name: "Coffee Pastry",
+    price: 250,
+    description:
+      "A coffee lover's dream, this cake is rich, dense, and topped with a luscious ganache for an extra decadent touch.",
+    imageSrc: Images.MENU20,
+    catergory: MenuItemType.PASTRY,
+  },
+  {
+    name: "Berry Pastry",
+    price: 250,
+    description:
+      "Our pastries are baked with love and perfection.",
+    imageSrc: Images.MENU21,
+    catergory: MenuItemType.PASTRY,
+  },
+  {
     name: "Cupcake Box",
     price: 250,
     description:
