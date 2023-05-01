@@ -29,7 +29,7 @@ const StyledDivider = styled.hr`
 
 const menuItems = [
   {
-    name: "Chocolate Cake",
+    name: "Almond Cake",
     price: 250,
     description:
       "Rich, moist chocolate cake layers sandwiched with creamy chocolate frosting for the ultimate indulgence.",
@@ -79,6 +79,20 @@ const menuItems = [
     price: 250,
     description: "Baking is love made visible",
     imageSrc: Images.MENU7,
+    catergory: MenuItemType.CAKE,
+  },
+  {
+    name: "Red Velvet Cake",
+    price: 250,
+    description: "Sweeten up your day with our treats.",
+    imageSrc: Images.MENU19,
+    catergory: MenuItemType.CAKE,
+  },
+  {
+    name: "Strawberry Cake",
+    price: 250,
+    description: "Made with the finest ingredients for a truly indulgent experience",
+    imageSrc: Images.MENU18,
     catergory: MenuItemType.CAKE,
   },
   {
@@ -153,6 +167,14 @@ const menuItems = [
     imageSrc: Images.MENU11,
     catergory: MenuItemType.CUPCAKE,
   },
+  {
+    name: "Bun Bun",
+    price: 250,
+    description:
+      "An unforgettable flavor experience that will leave you wanting more.",
+    imageSrc: Images.MENU17,
+    catergory: MenuItemType.CUPCAKE,
+  }
 ];
 
 const tabsListItems = [
