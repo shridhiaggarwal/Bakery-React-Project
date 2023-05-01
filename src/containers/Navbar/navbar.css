@@ -3,6 +3,8 @@
   height: 80px;
   padding-top: 0rem;
   padding-bottom: 0rem;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 .navbar-brand {
@@ -53,6 +55,11 @@
 .navToggleIcon {
   color: white;
   margin-right: 1rem;
+}
+
+.navToggleIcon:focus {
+  outline: none;
+  border: 1px solid white;
 }
 
 .dummyNavbar {

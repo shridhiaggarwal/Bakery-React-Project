@@ -30,11 +30,9 @@ function MenuCardsContainer(props: IMenuCardsContainerProps) {
     setModalOpen(false);
     setSelectedImage(null);
     const bodyElement = document.getElementsByTagName("body")[0];
-    const navElement = document.getElementsByTagName("nav")[0];
-    if (navElement) {
+    if (bodyElement) {
       bodyElement.classList.remove("modal-open");
       bodyElement.style.paddingRight = "0px";
-      navElement.style.paddingRight = "16px";
     }
   };
 

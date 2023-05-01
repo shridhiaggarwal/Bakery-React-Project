@@ -6,6 +6,7 @@ const StyledIconButton = styled(IconButton)`
   position: fixed;
   right: 32px;
   bottom: 32px;
+  z-index: 1;
 `;
 
 function ScrollToTopButton() {
