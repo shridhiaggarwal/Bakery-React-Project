@@ -21,6 +21,8 @@ function Counter(props: CountUpProps) {
       prefix={prefix}
       suffix={suffix}
       className={className}
+      enableScrollSpy={true}
+      scrollSpyOnce={true}
     />
   );
 }
