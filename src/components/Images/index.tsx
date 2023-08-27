@@ -2,6 +2,7 @@ import pinkLogo from "../../images/pinkLogo.png";
 import whiteLogo from "../../images/whiteLogo.png";
 import background1 from "../../images/backgrounds/background1.png";
 import background2 from "../../images/backgrounds/background2.png";
+import background3 from "../../images/backgrounds/background4.png";
 import cakeElement1 from "../../images/elements/cake_element.png";
 import cakeElement2 from "../../images/elements/cake_element2.png";
 import cakeElement3 from "../../images/elements/cake_element3.png";
@@ -9,11 +10,17 @@ import cakeElement4 from "../../images/elements/cake_element4.png";
 import cakeElement5 from "../../images/elements/cake_element5.png";
 import cakeElement6 from "../../images/elements/cake_element6.png";
 import cakeElement7 from "../../images/elements/cake_element7.png";
+import cakeElement8 from "../../images/elements/cake_element8.png";
+import cakeElement9 from "../../images/elements/cake_element9.png";
+import cakeElement10 from "../../images/elements/cake_element10.png";
 import cupcakeElement1 from "../../images/elements/cupcake_element.png";
 import cupcakeElement2 from "../../images/elements/cupcake_element2.png";
 import donutElement1 from "../../images/elements/donut_element.png";
+import donutElement3 from "../../images/elements/donut_element3.png";
 import icecreamElement1 from "../../images/elements/icecream_element.png";
+import icecreamElement2 from "../../images/elements/icecream_element2.png";
 import macaronElement1 from "../../images/elements/macaron_element.png";
+import cookieElement1 from "../../images/elements/cookie_element.png";
 import menu1 from "../../images/menu/menu1.jpg";
 import menu2 from "../../images/menu/menu2.jpg";
 import menu3 from "../../images/menu/menu3.jpg";
@@ -70,6 +77,7 @@ const Images = {
   WHITE_LOGO: whiteLogo,
   BACKGROUND1: background1,
   BACKGROUND2: background2,
+  BACKGROUND3: background3,
   CAKE_ELEMENT1: cakeElement1,
   CAKE_ELEMENT2: cakeElement2,
   CAKE_ELEMENT3: cakeElement3,
@@ -77,11 +85,17 @@ const Images = {
   CAKE_ELEMENT5: cakeElement5,
   CAKE_ELEMENT6: cakeElement6,
   CAKE_ELEMENT7: cakeElement7,
+  CAKE_ELEMENT8: cakeElement8,
+  CAKE_ELEMENT9: cakeElement9,
+  CAKE_ELEMENT10: cakeElement10,
   CUPCAKE_ELEMENT1: cupcakeElement1,
   CUPCAKE_ELEMENT2: cupcakeElement2,
   DONUT_ELEMENT1: donutElement1,
+  DONUT_ELEMENT3: donutElement3,
   ICECREAM_ELEMENT1: icecreamElement1,
+  ICECREAM_ELEMENT2: icecreamElement2,
   MACARON_ELEMENT1: macaronElement1,
+  COOKIE_ELEMENT1: cookieElement1,
   MENU1: menu1,
   MENU2: menu2,
   MENU3: menu3,

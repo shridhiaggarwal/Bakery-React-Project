@@ -1,9 +1,9 @@
 import React from "react";
-import ContactFormField from "../ContactFormField";
 import Button from "../../../../components/Button";
 import styled from "styled-components";
 import Images from "../../../../components/Images";
 import ImageBox from "../../../../components/ImageBox";
+import CustomInputField from "../../../../components/CustomInputField";
 
 interface IContactFormProps {
   margin?: string;
@@ -44,28 +44,29 @@ function ContactForm(props: IContactFormProps) {
     <StyledForm margin={margin}>
       <StyledRow className="row">
         <div className="col-md-6">
-          <ContactFormField
+          <CustomInputField
             id="name"
             inputType="text"
             inputPlaceholder="Name"
             inputName="name"
+            autofocus={true}
             required={true}
           />
-          <ContactFormField
+          <CustomInputField
             id="email"
             inputType="email"
             inputPlaceholder="Email"
             inputName="email"
             required={true}
           />
-          <ContactFormField
+          <CustomInputField
             id="subject"
             inputType="text"
             inputPlaceholder="Subject"
             inputName="subject"
             required={true}
           />
-          <ContactFormField
+          <CustomInputField
             id="message"
             inputPlaceholder="Message..."
             inputName="message"

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-interface IContactFormFieldProps {
+interface ICustomInputFieldProps {
   labelText?: string;
   id: string;
   inputType?: string;
@@ -12,6 +12,24 @@ interface IContactFormFieldProps {
   required?: boolean;
 }
 
+const StyledLabel = styled.label<{
+    color?: string;
+    fontFamily?: string;
+    fontWeight?: string | number;
+    margin?: string;
+    padding?: string;
+    textAlign?: string;
+  }>`
+    color: ${(props) => (props.color ? props.color : "#da5162")};
+    font-family: ${(props) =>
+      props.fontFamily ? props.fontFamily : "Montserrat, sans-serif"};
+    font-size: 1rem;
+    font-weight: ${(props) => props.fontWeight};
+    margin: ${(props) => props.margin};
+    padding: ${(props) => props.padding};
+    text-align: ${(props) => props.textAlign};
+  `;
+
 const StyledFormGroup = styled.div<{
   margin?: string;
 }>`
@@ -19,22 +37,22 @@ const StyledFormGroup = styled.div<{
 `;
 
 const StyledInput = styled.input<{}>`
-  border: 2px dotted #da5162;
+  border: 2px dotted #666666;
   &:focus {
     border: 2px solid #da5162;
-    box-shadow: 1px 1px 8px 0px rgba(218, 81, 98, 1);
+    box-shadow: 0px 0px 5px 0px rgba(218, 81, 98, 1);
   }
 `;
 
 const StyledTextarea = styled.textarea<{}>`
-  border: 2px dotted #da5162;
+  border: 2px dotted #666666;
   &:focus {
     border: 2px solid #da5162;
-    box-shadow: 1px 1px 10px 0px rgba(218, 81, 98, 1);
+    box-shadow: 0px 0px 5px 0px rgba(218, 81, 98, 1);
   }
 `;
 
-function ContactFormField(props: IContactFormFieldProps) {
+function CustomInputField(props: ICustomInputFieldProps) {
   const {
     labelText,
     id,
@@ -48,7 +66,11 @@ function ContactFormField(props: IContactFormFieldProps) {
 
   return (
     <StyledFormGroup className="form-group">
-      {labelText && <label>{labelText}</label>}
+      {labelText && (
+        <StyledLabel htmlFor={id} fontWeight="bold" margin="0 0 8px 0">
+          {labelText}
+        </StyledLabel>
+      )}
       {isTextarea ? (
         <StyledTextarea
           className="form-control"
@@ -74,4 +96,4 @@ function ContactFormField(props: IContactFormFieldProps) {
   );
 }
 
-export default ContactFormField;
+export default CustomInputField;
