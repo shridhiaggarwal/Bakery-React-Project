@@ -4,8 +4,8 @@ import styled from "styled-components";
 import CustomInputField from "../../../components/CustomInputField";
 import Button from "../../../components/Button";
 
-interface ISignupFormProps {
-  handleSignupClick: () => void;
+interface IForgetPasswordFormProps {
+    handleForgetPassword: () => void;
 }
 
 const CenterDiv = styled.div`
@@ -13,8 +13,8 @@ const CenterDiv = styled.div`
   justify-content: center;
 `;
 
-function SignupForm(props: ISignupFormProps) {
-  const { handleSignupClick } = props;
+function LoginForm(props: IForgetPasswordFormProps) {
+  const { handleForgetPassword } = props;
 
   return (
     <>
@@ -24,18 +24,9 @@ function SignupForm(props: ISignupFormProps) {
         margin="0 0 2rem 0"
         textAlign="center"
       >
-        Sign Up
+        Forget Password
       </Typography>
       <form>
-        <CustomInputField
-          labelText="Name"
-          id="name"
-          inputType="text"
-          inputPlaceholder="Enter Name"
-          inputName="name"
-          autofocus={true}
-          required={true}
-        />
         <CustomInputField
           labelText="Email"
           id="email"
@@ -43,13 +34,22 @@ function SignupForm(props: ISignupFormProps) {
           inputPlaceholder="Enter Email"
           inputName="email"
           required={true}
+          disabled={true}
         />
         <CustomInputField
-          labelText="Password"
-          id="password"
+          labelText="Current Password"
+          id="curentPassword"
           inputType="password"
-          inputPlaceholder="Enter Password"
-          inputName="password"
+          inputPlaceholder="Enter Current Password"
+          inputName="curentPassword"
+          required={true}
+        />
+        <CustomInputField
+          labelText="New Password"
+          id="newPassword"
+          inputType="password"
+          inputPlaceholder="Enter New Password"
+          inputName="newPassword"
           required={true}
         />
         <CustomInputField
@@ -62,12 +62,12 @@ function SignupForm(props: ISignupFormProps) {
         />
       </form>
       <CenterDiv>
-        <Button onButtonClick={handleSignupClick} marginTop={"1.5rem"}>
-          Sign Up
+        <Button onButtonClick={handleForgetPassword} marginTop={"1.5rem"}>
+          Reset Password
         </Button>
       </CenterDiv>
     </>
   );
 }
 
-export default SignupForm;
+export default LoginForm;

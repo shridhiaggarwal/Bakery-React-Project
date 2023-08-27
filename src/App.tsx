@@ -10,6 +10,7 @@ import Footer from "./containers/Footer";
 import ScrollToTopButton from "./containers/ScrollToTopButton";
 import LoginPage from "./AuthPages/LoginPage";
 import SignupPage from "./AuthPages/SignupPage";
+import ForgetPasswordPage from "./AuthPages/ForgetPasswordPage";
 
 function MainApp() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/reset_password" element={<ForgetPasswordPage />} />
           <Route path="/*" element={<MainApp />} />
         </Routes>
       </BrowserRouter>

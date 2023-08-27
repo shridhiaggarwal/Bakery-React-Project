@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 interface ICustomInputFieldProps {
   labelText?: string;
+  inputValue?: string;
   id: string;
   inputType?: string;
   inputPlaceholder: string;
@@ -10,6 +11,7 @@ interface ICustomInputFieldProps {
   isTextarea?: boolean;
   autofocus?: boolean;
   required?: boolean;
+  disabled?: boolean;
 }
 
 const StyledLabel = styled.label<{
@@ -55,6 +57,7 @@ const StyledTextarea = styled.textarea<{}>`
 function CustomInputField(props: ICustomInputFieldProps) {
   const {
     labelText,
+    inputValue,
     id,
     inputType,
     inputPlaceholder,
@@ -62,6 +65,7 @@ function CustomInputField(props: ICustomInputFieldProps) {
     isTextarea,
     autofocus,
     required,
+    disabled,
   } = props;
 
   return (
@@ -74,22 +78,26 @@ function CustomInputField(props: ICustomInputFieldProps) {
       {isTextarea ? (
         <StyledTextarea
           className="form-control"
+          value={inputValue}
           id={id}
           placeholder={inputPlaceholder}
           name={inputName}
           rows={6}
           autoFocus={autofocus}
           required={required}
+          disabled={disabled}
         />
       ) : (
         <StyledInput
           className="form-control"
+          value={inputValue}
           id={id}
           type={inputType || "text"}
           placeholder={inputPlaceholder}
           name={inputName}
           autoFocus={autofocus}
           required={required}
+          disabled={disabled}
         />
       )}
     </StyledFormGroup>
