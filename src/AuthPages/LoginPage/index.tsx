@@ -4,14 +4,21 @@ import Typography from "../../components/Typography";
 import styled from "styled-components";
 import CustomInputField from "../../components/CustomInputField";
 import Button from "../../components/Button";
+import CommonLink from "../../components/Link";
+import { useNavigate } from "react-router-dom";
 
 interface ILoginFormProps {
   handleLoginClick: () => void;
 }
 
-const CenterDiv = styled.div`
+const CenterDiv = styled.div<{
+  margin?: string;
+}>`
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: ${(props) => props.margin};
 `;
 
 const StyledForm = styled.form`
@@ -20,7 +27,13 @@ const StyledForm = styled.form`
 `;
 
 function LoginForm(props: ILoginFormProps) {
+  const navigate = useNavigate();
   const { handleLoginClick } = props;
+
+  const handleSignupLink = () => {
+    navigate("/signup");
+  };
+
   return (
     <>
       <Typography
@@ -54,6 +67,16 @@ function LoginForm(props: ILoginFormProps) {
           Login
         </Button>
       </CenterDiv>
+      <CenterDiv margin="0.5rem 0 0 0">
+        <Typography variant="caption" margin="0 8px 0 0" textAlign="center">
+          Craving our treats? New here?
+        </Typography>
+        <CommonLink
+          textValue={"SignUp"}
+          textVariant="caption"
+          onLinkClick={handleSignupLink}
+        />
+      </CenterDiv>
     </>
   );
 }
@@ -64,9 +87,10 @@ function LoginPage(props: any) {
   const handleLoginClick = () => {};
 
   return (
-    <AuthPageContainer formContent={<LoginForm handleLoginClick={handleLoginClick}/>}/>
+    <AuthPageContainer
+      formContent={<LoginForm handleLoginClick={handleLoginClick} />}
+    />
   );
 }
 
 export default LoginPage;
-
