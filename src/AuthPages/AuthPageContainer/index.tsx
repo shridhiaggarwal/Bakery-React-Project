@@ -1,23 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import Images from "../../components/Images";
-import LoginForm from "../LoginPage/loginForm";
 
-interface IAuthPageContainerProps{
+interface IAuthPageContainerProps {
   formContent: any;
 }
 
 const StyledFormDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   width: 400px;
-  padding-top: 160px;
-  // height: 100%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
+  height: inherit;
 `;
 
-const LoginPageImage = styled.section`
+const AuthPageBox = styled.section`
   background-image: url(${Images.BACKGROUND3});
   height: 100vh;
   position: relative;
@@ -32,11 +31,11 @@ const Image1 = styled.img`
 `;
 
 const Image2 = styled.img`
-position: absolute;
-top: 280px;
-left: 300px;
-width: 200px;
-rotate: 30deg;
+  position: absolute;
+  top: 280px;
+  left: 300px;
+  width: 200px;
+  rotate: 30deg;
 `;
 
 const Image3 = styled.img`
@@ -73,17 +72,15 @@ function AuthPageContainer(props: IAuthPageContainerProps) {
   const { formContent } = props;
 
   return (
-    <LoginPageImage>
+    <AuthPageBox>
       <Image1 src={Images.CAKE_ELEMENT8} />
       <Image2 src={Images.CAKE_ELEMENT9} />
       <Image3 src={Images.ICECREAM_ELEMENT2} />
       <Image4 src={Images.DONUT_ELEMENT3} />
       <Image5 src={Images.COOKIE_ELEMENT1} />
       <Image6 src={Images.CAKE_ELEMENT10} />
-      <StyledFormDiv>
-        {formContent}
-      </StyledFormDiv>
-    </LoginPageImage>
+      <StyledFormDiv>{formContent}</StyledFormDiv>
+    </AuthPageBox>
   );
 }
 
