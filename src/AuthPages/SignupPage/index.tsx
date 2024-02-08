@@ -1,17 +1,23 @@
-import React from "react";
 import AuthPageContainer from "../AuthPageContainer";
 import Typography from "../../components/Typography";
 import styled from "styled-components";
 import CustomInputField from "../../components/CustomInputField";
 import Button from "../../components/Button";
+import { useNavigate } from "react-router-dom";
+import CommonLink from "../../components/Link";
 
 interface ISignupFormProps {
   handleSignupClick: () => void;
 }
 
-const CenterDiv = styled.div`
+const CenterDiv = styled.div<{
+  margin?: string;
+}>`
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: ${props => props.margin};
 `;
 
 const StyledForm = styled.form`
@@ -20,7 +26,12 @@ const StyledForm = styled.form`
 `;
 
 function SignupForm(props: ISignupFormProps) {
+  const navigate = useNavigate();
   const { handleSignupClick } = props;
+
+  const handleLoginLink = () => {
+    navigate("/login");
+  };
 
   return (
     <>
@@ -58,19 +69,29 @@ function SignupForm(props: ISignupFormProps) {
           inputName="password"
           required={true}
         />
-        <CustomInputField
+        {/* <CustomInputField
           labelText="Confirm Password"
           id="confirmPassword"
           inputType="password"
           inputPlaceholder="Enter Confirm Password"
           inputName="confirmPassword"
           required={true}
-        />
+        /> */}
       </StyledForm>
       <CenterDiv>
         <Button onButtonClick={handleSignupClick} marginTop={"1.5rem"}>
           Sign Up
         </Button>
+      </CenterDiv>
+      <CenterDiv margin="0.5rem 0 0 0">
+        <Typography variant="caption" margin="0 8px 0 0" textAlign="center">
+          Already registered?
+        </Typography>
+        <CommonLink
+          textValue={"Login"}
+          textVariant="caption"
+          onLinkClick={handleLoginLink}
+        />
       </CenterDiv>
     </>
   );
